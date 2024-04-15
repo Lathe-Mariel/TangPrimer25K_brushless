@@ -1,0 +1,30 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="4096" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+        <SignalList>
+            <Signal>duty</Signal>
+            <Bus name="rotateState[2:0]">
+                <Signal>rotateState[2]</Signal>
+                <Signal>rotateState[1]</Signal>
+                <Signal>rotateState[0]</Signal>
+            </Bus>
+            <Signal>HIN_R</Signal>
+            <Signal>HIN_S</Signal>
+            <Signal>HIN_T</Signal>
+            <Signal>CS</Signal>
+            <Signal>DIN</Signal>
+            <Signal>DOUT</Signal>
+            <Bus name="processCounter[5:0]">
+                <Signal>processCounter[5]</Signal>
+                <Signal>processCounter[4]</Signal>
+                <Signal>processCounter[3]</Signal>
+                <Signal>processCounter[2]</Signal>
+                <Signal>processCounter[1]</Signal>
+                <Signal>processCounter[0]</Signal>
+            </Bus>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0101010111011111</GAO_ID>
+</GAO_CONFIG>
