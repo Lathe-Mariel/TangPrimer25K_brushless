@@ -3,7 +3,7 @@
  Using this board, you can attach Tang Nano 9K(Sipeed) as an alternative to NUCLEO.
  There's Garber data made by KiCAD.
 
-![system overview](references/brushless.png)
+
 
 # BoM
 型名 | アイテム（Item）|個数（Quantity）
@@ -14,7 +14,6 @@
 TVGP01-G73BB with Gray cap | スイッチ | 4
 MCP3008-I/P | A-Dコンバータ | 1
 2MS1-T1-B4-M2-Q-E | トグルスイッチ | 3
-OSL40562-LR | 4桁8セグLED | 1
 BP5293-50 | 5VDCDCコンバータ | 1
 
 # FPGA Design
