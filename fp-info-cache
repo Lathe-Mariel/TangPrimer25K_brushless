@@ -1,4 +1,4 @@
-23124946972856530
+23126660238506955
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -87415,6 +87415,13 @@ Integrated Circuit
 0
 20
 20
+SamacSys_Parts
+TVGP01G73BB
+TVGP01-G73BB-2
+Switch
+0
+4
+4
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
