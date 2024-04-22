@@ -1,4 +1,4 @@
-23128387333665789
+23128374202042232
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -87380,6 +87380,55 @@ rotary encoder
 0
 7
 6
+SamacSys_Parts
+AZ1084CD50TRG1
+TO252_1
+Integrated Circuit
+0
+3
+3
+SamacSys_Parts
+DF40C-60DP-0.4V_51_
+DF40C-60DP-0.4V(51)
+Connector
+0
+64
+64
+SamacSys_Parts
+NE555DR
+D (R-PDSO-G8)
+Integrated Circuit
+0
+8
+8
+SamacSys_Parts
+SM24CANB02HTG
+SOT23-3_2023
+TVS Diode (Bi-directional)
+0
+3
+3
+SamacSys_Parts
+SOIC127P600X175-8N
+SO8(1.75)
+Integrated Circuit
+0
+8
+8
+SamacSys_Parts
+SOIC127P1033X265-20N
+20-Lead Plastic Small Outline (SO) - Wide, 7.50 mm Body [SOIC]_2024
+Integrated Circuit
+0
+20
+20
+SamacSys_Parts
+TVGP01G73BB
+TVGP01-G73BB-2
+Switch
+0
+4
+4
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -94702,52 +94751,3 @@ Varistor VF
 0
 2
 2
-footprints
-NE555DR
-D (R-PDSO-G8)
-Integrated Circuit
-0
-8
-8
-footprints
-PICO
-PICO
-Connector
-0
-53
-53
-footprints
-SDCW32162222TF
-SDCW3216-2-222TF
-Inductor
-0
-4
-4
-footprints
-SHDR2W64P0X250_1X2_740X575X700P
-B2B-XH-A(LF)(SN)
-Connector
-0
-2
-2
-footprints
-SM24CANB02HTG
-SOT23-3_2023
-TVS Diode (Bi-directional)
-0
-3
-3
-footprints
-SOIC127P600X175-8N
-SO8(1.75)
-Integrated Circuit
-0
-8
-8
-footprints
-SOIC127P1033X265-20N
-20-Lead Plastic Small Outline (SO) - Wide, 7.50 mm Body [SOIC]_2024
-Integrated Circuit
-0
-20
-20
