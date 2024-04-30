@@ -1,15 +1,137 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.5*%
+%TF.CreationDate,2023-10-10T13:20:49+09:00*%
+%TF.ProjectId,tangnano9k_brushless_driver,74616e67-6e61-46e6-9f39-6b5f62727573,rev?*%
+=======
 %TF.GenerationSoftware,KiCad,Pcbnew,8.0.0*%
 %TF.CreationDate,2024-04-23T01:00:26+09:00*%
 %TF.ProjectId,TangPrimer25K_brushless,54616e67-5072-4696-9d65-7232354b5f62,rev?*%
+>>>>>>> parent of b09ad77 (0423)
+=======
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.0*%
+%TF.CreationDate,2024-04-23T01:00:26+09:00*%
+%TF.ProjectId,TangPrimer25K_brushless,54616e67-5072-4696-9d65-7232354b5f62,rev?*%
+>>>>>>> parent of b09ad77 (0423)
+=======
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.0*%
+%TF.CreationDate,2024-04-23T01:00:26+09:00*%
+%TF.ProjectId,TangPrimer25K_brushless,54616e67-5072-4696-9d65-7232354b5f62,rev?*%
+>>>>>>> parent of b09ad77 (0423)
+=======
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.0*%
+%TF.CreationDate,2024-04-23T01:00:26+09:00*%
+%TF.ProjectId,TangPrimer25K_brushless,54616e67-5072-4696-9d65-7232354b5f62,rev?*%
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.0*%
+%TF.CreationDate,2024-04-23T01:00:26+09:00*%
+%TF.ProjectId,TangPrimer25K_brushless,54616e67-5072-4696-9d65-7232354b5f62,rev?*%
+>>>>>>> parent of 736fd3d (Revert "0423")
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Paste,Bot*%
 %TF.FilePolarity,Positive*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+G04 Created by KiCad (PCBNEW 7.0.5) date 2023-10-10 13:20:49*
+=======
 G04 Created by KiCad (PCBNEW 8.0.0) date 2024-04-23 01:00:26*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 Created by KiCad (PCBNEW 8.0.0) date 2024-04-23 01:00:26*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 Created by KiCad (PCBNEW 8.0.0) date 2024-04-23 01:00:26*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 Created by KiCad (PCBNEW 8.0.0) date 2024-04-23 01:00:26*
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+G04 Created by KiCad (PCBNEW 8.0.0) date 2024-04-23 01:00:26*
+>>>>>>> parent of 736fd3d (Revert "0423")
 %MOMM*%
 %LPD*%
 G01*
 G04 APERTURE LIST*
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+G04 Aperture macros list*
+%AMRoundRect*
+0 Rectangle with rounded corners*
+0 $1 Rounding radius*
+0 $2 $3 $4 $5 $6 $7 $8 $9 X,Y pos of 4 corners*
+0 Add a 4 corners polygon primitive as box body*
+4,1,4,$2,$3,$4,$5,$6,$7,$8,$9,$2,$3,0*
+0 Add four circle primitives for the rounded corners*
+1,1,$1+$1,$2,$3*
+1,1,$1+$1,$4,$5*
+1,1,$1+$1,$6,$7*
+1,1,$1+$1,$8,$9*
+0 Add four rect primitives between the rounded corners*
+20,1,$1+$1,$2,$3,$4,$5,0*
+20,1,$1+$1,$4,$5,$6,$7,0*
+20,1,$1+$1,$6,$7,$8,$9,0*
+20,1,$1+$1,$8,$9,$2,$3,0*%
+G04 Aperture macros list end*
+%ADD10RoundRect,0.237500X-0.237500X0.250000X-0.237500X-0.250000X0.237500X-0.250000X0.237500X0.250000X0*%
 G04 APERTURE END LIST*
+D10*
+%TO.C,R9*%
+X186537600Y-65635500D03*
+X186537600Y-67460500D03*
+%TD*%
+%TO.C,R10*%
+X184048400Y-65633600D03*
+X184048400Y-67458600D03*
+%TD*%
+%TO.C,R5*%
+X166243000Y-65636500D03*
+X166243000Y-67461500D03*
+%TD*%
+%TO.C,R4*%
+X163728400Y-65633600D03*
+X163728400Y-67458600D03*
+%TD*%
+%TO.C,R7*%
+X171348400Y-65635500D03*
+X171348400Y-67460500D03*
+%TD*%
+%TO.C,R3*%
+X161188400Y-65684400D03*
+X161188400Y-67509400D03*
+%TD*%
+%TO.C,R8*%
+X176428400Y-65635500D03*
+X176428400Y-67460500D03*
+%TD*%
+%TO.C,R6*%
+X168757600Y-65633600D03*
+X168757600Y-67458600D03*
+%TD*%
+=======
+G04 APERTURE END LIST*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 APERTURE END LIST*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 APERTURE END LIST*
+>>>>>>> parent of b09ad77 (0423)
+=======
+G04 APERTURE END LIST*
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+G04 APERTURE END LIST*
+>>>>>>> parent of 736fd3d (Revert "0423")
 M02*

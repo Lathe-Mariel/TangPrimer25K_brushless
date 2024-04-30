@@ -1,4 +1,43 @@
 M48
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+; DRILL file {KiCad 7.0.5} date Tue Oct 10 13:20:52 2023
+; FORMAT={-:-/ absolute / inch / decimal}
+; #@! TF.CreationDate,2023-10-10T13:20:52+09:00
+; #@! TF.GenerationSoftware,Kicad,Pcbnew,7.0.5
+=======
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
+; DRILL file {KiCad 8.0.0} date 2024-04-23T01:00:30+0900
+; FORMAT={-:-/ absolute / metric / decimal}
+; #@! TF.CreationDate,2024-04-23T01:00:30+09:00
+; #@! TF.GenerationSoftware,Kicad,Pcbnew,8.0.0
+<<<<<<< HEAD
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
+; #@! TF.FileFunction,NonPlated,1,2,NPTH
+FMAT,2
+METRIC
+; #@! TA.AperFunction,NonPlated,NPTH,ComponentDrill
+T1C1.000
+; #@! TA.AperFunction,NonPlated,NPTH,ComponentDrill
+T2C1.200
+; #@! TA.AperFunction,NonPlated,NPTH,ComponentDrill
+T3C1.700
+; #@! TA.AperFunction,NonPlated,NPTH,ComponentDrill
+T4C3.250
+%
+G90
+G05
+<<<<<<< HEAD
+<<<<<<< HEAD
+T0
+=======
+=======
+>>>>>>> parent of b09ad77 (0423)
 ; DRILL file {KiCad 8.0.0} date 2024-04-23T01:00:30+0900
 ; FORMAT={-:-/ absolute / metric / decimal}
 ; #@! TF.CreationDate,2024-04-23T01:00:30+09:00
@@ -17,6 +56,10 @@ T4C3.250
 %
 G90
 G05
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
 T1
 X143.733Y-63.731
 X143.733Y-66.271
@@ -30,4 +73,14 @@ X175.048Y-125.708
 T4
 X126.136Y-58.467
 X126.136Y-71.167
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b09ad77 (0423)
+=======
+>>>>>>> parent of b09ad77 (0423)
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
+=======
+>>>>>>> parent of 736fd3d (Revert "0423")
 M30
