@@ -13894,7 +13894,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 162.179 133.731 0)
+		(at 162.306 138.684 0)
 		(layer "F.SilkS")
 		(uuid "79c20aba-536b-447b-b8a0-a632a58906a4")
 		(effects
