@@ -1,43 +1,4 @@
 M48
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-; DRILL file {KiCad 7.0.5} date Tue Oct 10 13:20:52 2023
-; FORMAT={-:-/ absolute / inch / decimal}
-; #@! TF.CreationDate,2023-10-10T13:20:52+09:00
-; #@! TF.GenerationSoftware,Kicad,Pcbnew,7.0.5
-=======
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-; DRILL file {KiCad 8.0.0} date 2024-04-23T01:00:30+0900
-; FORMAT={-:-/ absolute / metric / decimal}
-; #@! TF.CreationDate,2024-04-23T01:00:30+09:00
-; #@! TF.GenerationSoftware,Kicad,Pcbnew,8.0.0
-<<<<<<< HEAD
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-; #@! TF.FileFunction,Plated,1,2,PTH
-FMAT,2
-METRIC
-; #@! TA.AperFunction,Plated,PTH,ViaDrill
-T1C0.300
-; #@! TA.AperFunction,Plated,PTH,ViaDrill
-T2C0.400
-; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T3C0.800
-; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T4C0.870
-; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-T5C0.890
-; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-<<<<<<< HEAD
-<<<<<<< HEAD
-T5C0.0512
-=======
-=======
->>>>>>> parent of b09ad77 (0423)
 ; DRILL file {KiCad 8.0.0} date 2024-04-23T01:00:30+0900
 ; FORMAT={-:-/ absolute / metric / decimal}
 ; #@! TF.CreationDate,2024-04-23T01:00:30+09:00
@@ -56,152 +17,15 @@ T4C0.870
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
 T5C0.890
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
 T6C1.000
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
 T7C1.300
 ; #@! TA.AperFunction,Plated,PTH,ComponentDrill
 T8C1.570
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
 %
 G90
 G05
 T1
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-X5.66Y-4.09
-X5.77Y-4.09
-X5.79Y-5.21
-X5.79Y-5.75
-X5.875Y-4.09
-X6.6Y-5.46
-X6.6Y-5.69
-X6.88Y-5.69
-X7.26Y-3.38
-X7.34Y-5.19
-X7.5Y-3.2
-X7.69Y-5.56
-X7.69Y-5.87
-X7.75Y-2.56
-X7.75Y-2.79
-X7.75Y-3.02
-=======
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-X161.036Y-110.998
-X161.036Y-113.436
-X161.036Y-115.214
-X161.036Y-116.434
-X161.036Y-118.415
-X164.846Y-121.793
-X175.006Y-122.022
-X175.057Y-110.388
-X175.057Y-112.776
-X175.057Y-119.228
-<<<<<<< HEAD
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-T2
-X130.556Y-135.89
-X132.715Y-76.454
-X134.874Y-132.842
-X137.668Y-103.759
-X139.954Y-102.108
-X140.081Y-97.282
-X142.24Y-91.948
-X142.24Y-94.615
-X145.161Y-96.901
-X150.495Y-107.696
-X151.384Y-79.629
-X153.162Y-89.281
-X153.162Y-93.726
-X153.543Y-64.897
-X153.543Y-70.993
-X154.273Y-106.14
-X154.559Y-101.219
-X159.766Y-79.629
-X159.766Y-101.219
-X164.465Y-117.221
-X165.798Y-132.779
-X166.624Y-124.333
-X166.751Y-96.774
-X167.513Y-99.949
-X169.418Y-118.11
-X170.561Y-130.683
-X170.815Y-133.604
-X173.355Y-81.026
-X173.355Y-85.217
-X178.276Y-116.808
-X178.689Y-125.984
-X178.943Y-106.68
-X180.34Y-117.45
-X180.848Y-112.37
-X181.356Y-123.317
-X181.737Y-99.441
-X181.737Y-102.235
-X181.864Y-130.937
-X182.829Y-117.145
-X183.007Y-128.397
-X183.032Y-110.846
-T3
-X140.675Y-125.339
-X140.675Y-127.879
-X140.675Y-130.419
-X140.675Y-132.959
-X140.675Y-135.499
-X140.675Y-138.039
-X140.675Y-140.579
-X140.675Y-143.119
-X148.295Y-125.339
-X148.295Y-127.879
-X148.295Y-130.419
-X148.295Y-132.959
-X148.295Y-135.499
-X148.295Y-138.039
-X148.295Y-140.579
-X148.295Y-143.119
-T4
-X139.7Y-107.188
-X139.7Y-109.728
-X139.7Y-112.268
-T5
-<<<<<<< HEAD
-<<<<<<< HEAD
-X4.7939Y-5.6366
-X4.7939Y-5.8334
-X5.2861Y-5.6366
-X5.2861Y-5.8334
-X5.4429Y-5.085
-X5.4429Y-5.2819
-X5.4439Y-5.6366
-X5.4439Y-5.8334
-X5.6539Y-4.5266
-X5.6539Y-4.7234
-X5.935Y-5.085
-X5.935Y-5.2819
-X5.9361Y-5.6366
-X5.9361Y-5.8334
-X6.1461Y-4.5266
-X6.1461Y-4.7234
-T0
-=======
-=======
->>>>>>> parent of b09ad77 (0423)
 X161.036Y-110.998
 X161.036Y-113.436
 X161.036Y-115.214
@@ -276,10 +100,6 @@ X139.7Y-107.188
 X139.7Y-109.728
 X139.7Y-112.268
 T5
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
 X128.676Y-62.281
 X128.676Y-64.313
 X128.676Y-66.345
@@ -408,14 +228,4 @@ X190.928Y-150.676
 T8
 X129.566Y-56.687
 X129.566Y-72.947
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
 M30
