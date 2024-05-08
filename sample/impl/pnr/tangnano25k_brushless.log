@@ -1,0 +1,7 @@
+Reading netlist file: "H:\git\TangPrimer25K_brushless\sample\impl\gwsynthesis\tangnano25k_brushless.vg"
+Parsing netlist file "H:\git\TangPrimer25K_brushless\sample\impl\gwsynthesis\tangnano25k_brushless.vg" completed
+Processing netlist completed
+Reading constraint file: "H:\git\TangPrimer25K_brushless\sample\src\top.cst"
+ERROR  (CT1113) : "H:\git\TangPrimer25K_brushless\sample\src\top.cst":54 | Can't find pad location 'A9' in current package
+ERROR  (CT1113) : "H:\git\TangPrimer25K_brushless\sample\src\top.cst":56 | Can't find pad location 'B9' in current package
+Physical Constraint parsed completed with errors
