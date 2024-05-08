@@ -1,0 +1,15 @@
+-d H:\git\TangPrimer25K_brushless\sample\WS2812\impl\gwsynthesis\WS2812.vg
+-p GW5A-25A-MBGA121N-1
+-pn GW5A-LV25MG121NES
+-cst H:\git\TangPrimer25K_brushless\sample\WS2812\src\top.cst
+-cfg H:\git\TangPrimer25K_brushless\sample\WS2812\impl\pnr\device.cfg
+-sdc H:\git\TangPrimer25K_brushless\sample\WS2812\src\WS2812.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000
+-enable_dsrm 0
