@@ -4,9 +4,9 @@ module top (
 	output reg WS2812 //输出到WS2812的接口
 	
 );
-parameter WS2812_NUM 	=  2 - 1     ; // WS2812的LED数量(1从0开始)
+parameter WS2812_NUM 	=  1 - 1     ; // WS2812的LED数量(1从0开始)
 parameter WS2812_WIDTH 	= 24 	     ; // WS2812的数据位宽
-parameter CLK_FRE 	 	= 27_000_000	 	 ; // CLK的频率(mHZ)
+parameter CLK_FRE 	 	= 50_000_000	 	 ; // CLK的频率(mHZ)
 
 parameter DELAY_1_HIGH 	= (CLK_FRE / 1_000_000 * 0.85 )  - 1; //≈850ns±150ns     1 高电平时间
 parameter DELAY_1_LOW 	= (CLK_FRE / 1_000_000 * 0.40 )  - 1; //≈400ns±150ns 	 1 低电平时间
