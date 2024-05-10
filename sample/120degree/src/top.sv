@@ -141,7 +141,7 @@ module top (
       DIN <= 0;
       CS <= 0;
     end else if(processCounter[4:0] == 5'd12)begin  // D0
-      DIN <= 0;
+      DIN <= 1;
       CS <= 0;
     end else if(processCounter[4:0] < 5'd15)begin  // 0
       CS <= 0;
