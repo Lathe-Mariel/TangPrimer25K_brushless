@@ -1,7 +1,8 @@
 {
+ "Device" : "GW5A-25A",
  "Files" : [
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
+   "Path" : "H:/git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
    "Type" : "verilog"
   }
  ],
@@ -9,7 +10,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "C:/Git/TangPrimer25K_brushless/sample/120degree/impl/temp/rtl_parser.result",
+ "ResultFile" : "H:/git/TangPrimer25K_brushless/sample/120degree/impl/temp/rtl_parser.result",
  "Top" : "top",
  "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"

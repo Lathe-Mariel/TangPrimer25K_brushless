@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Fri May 10 02:09:44 2024
+<td>Sat May 11 01:12:40 2024
 </td>
 </tr>
 <tr>
@@ -97,15 +97,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.043s, Elapsed time = 0h 0m 0.043s
-   Placement Phase 1: CPU time = 0h 0m 0.31s, Elapsed time = 0h 0m 0.31s
-   Placement Phase 2: CPU time = 0h 0m 0.017s, Elapsed time = 0h 0m 0.017s
-   Placement Phase 3: CPU time = 0h 0m 0.631s, Elapsed time = 0h 0m 0.631s
+   Placement Phase 0: CPU time = 0h 0m 0.042s, Elapsed time = 0h 0m 0.043s
+   Placement Phase 1: CPU time = 0h 0m 0.33s, Elapsed time = 0h 0m 0.33s
+   Placement Phase 2: CPU time = 0h 0m 0.011s, Elapsed time = 0h 0m 0.011s
+   Placement Phase 3: CPU time = 0h 0m 0.642s, Elapsed time = 0h 0m 0.641s
    Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 Running routing:
    Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Routing Phase 1: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-   Routing Phase 2: CPU time = 0h 0m 0.101s, Elapsed time = 0h 0m 0.101s
+   Routing Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+   Routing Phase 2: CPU time = 0h 0m 0.106s, Elapsed time = 0h 0m 0.105s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
    Total Routing: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
 Generate output files:
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>182/23040</td>
+<td>181/23040</td>
 <td><1%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>182(112 LUT, 70 ALU, 0 ROM16)</td>
+<td>181(110 LUT, 71 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -169,12 +169,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>111/11520</td>
+<td>110/11520</td>
 <td><1%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
-<td>25</td>
+<td>26</td>
 <td>-</td>
 </tr>
 <tr>
@@ -273,7 +273,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">bank 2</td>
-<td>1/12(8%)</td>
+<td>2/12(16%)</td>
 </tr>
 <tr>
 <td class="label">bank 3</td>
@@ -317,7 +317,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">GCLK_PIN</td>
-<td>10/30(34%)</td>
+<td>9/30(30%)</td>
 </tr>
 <tr>
 <td class="label">PLL</td>
@@ -492,6 +492,25 @@ Generate output files:
 <td>MEDIUM</td>
 </tr>
 <tr>
+<td class="label">direction</td>
+<td></td>
+<td>L2/2</td>
+<td>Y</td>
+<td>in</td>
+<td>IOR18[A]</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>UP</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
 <td class="label">HS[0]</td>
 <td></td>
 <td>A11/6</td>
@@ -538,7 +557,7 @@ Generate output files:
 <td>IOL3[A]</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
-<td>UP</td>
+<td>DOWN</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -779,10 +798,10 @@ Generate output files:
 <tr>
 <td class="label">CAN_LED1</td>
 <td></td>
-<td>J1/2</td>
+<td>K4/2</td>
 <td>N</td>
 <td>out</td>
-<td>IOR33[A]</td>
+<td>IOR22[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -1900,7 +1919,7 @@ Generate output files:
 <td>IOL3[A]</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
-<td>UP</td>
+<td>DOWN</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -2133,11 +2152,11 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">L2/2</td>
-<td>-</td>
+<td>direction</td>
 <td>in</td>
 <td>IOR18[A]</td>
 <td>LVCMOS33</td>
-<td>8</td>
+<td>OFF</td>
 <td>UP</td>
 <td>OFF</td>
 <td>ON</td>
@@ -2218,14 +2237,14 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">K4/2</td>
-<td>-</td>
-<td>in</td>
+<td>CAN_LED1</td>
+<td>out</td>
 <td>IOR22[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
-<td>ON</td>
+<td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -2303,14 +2322,14 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">J1/2</td>
-<td>CAN_LED1</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOR33[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>NONE</td>
+<td>UP</td>
 <td>OFF</td>
-<td>OFF</td>
+<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>

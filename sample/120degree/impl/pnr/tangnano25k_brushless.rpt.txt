@@ -12,21 +12,21 @@
   <Part Number>: GW5A-LV25MG121NES
   <Device>: GW5A-25
   <Device Version>: A
-  <Created Time>:Fri May 10 02:09:44 2024
+  <Created Time>:Sat May 11 01:12:40 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.043s, Elapsed time = 0h 0m 0.043s
-    Placement Phase 1: CPU time = 0h 0m 0.31s, Elapsed time = 0h 0m 0.31s
-    Placement Phase 2: CPU time = 0h 0m 0.017s, Elapsed time = 0h 0m 0.017s
-    Placement Phase 3: CPU time = 0h 0m 0.631s, Elapsed time = 0h 0m 0.631s
+    Placement Phase 0: CPU time = 0h 0m 0.042s, Elapsed time = 0h 0m 0.043s
+    Placement Phase 1: CPU time = 0h 0m 0.33s, Elapsed time = 0h 0m 0.33s
+    Placement Phase 2: CPU time = 0h 0m 0.011s, Elapsed time = 0h 0m 0.011s
+    Placement Phase 3: CPU time = 0h 0m 0.642s, Elapsed time = 0h 0m 0.641s
     Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Routing Phase 1: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Routing Phase 2: CPU time = 0h 0m 0.101s, Elapsed time = 0h 0m 0.101s
+    Routing Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Routing Phase 2: CPU time = 0h 0m 0.106s, Elapsed time = 0h 0m 0.105s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Generate output files:
@@ -40,16 +40,16 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 182/23040  <1%
-    --LUT,ALU,ROM16           | 182(112 LUT, 70 ALU, 0 ROM16)
+  Logic                       | 181/23040  <1%
+    --LUT,ALU,ROM16           | 181(110 LUT, 71 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
   Register                    | 101/23280  <1%
     --Logic Register as Latch | 3/23040  <1%
     --Logic Register as FF    | 89/23040  <1%
     --I/O Register as Latch   | 3/240  2%
     --I/O Register as FF      | 6/240  3%
-  CLS                         | 111/11520  <1%
-  I/O Port                    | 25
+  CLS                         | 110/11520  <1%
+  I/O Port                    | 26
   I/O Buf                     | 22
     --Input Buf               | 8
     --Output Buf              | 14
@@ -77,7 +77,7 @@
   -----------------------
   bank 0   | 3/6(50%)    
   bank 1   | 5/10(50%)   
-  bank 2   | 1/12(8%)    
+  bank 2   | 2/12(16%)   
   bank 3   | 0/4(0%)     
   bank 4   | 0/11(0%)    
   bank 5   | 5/13(38%)   
@@ -94,7 +94,7 @@
   -------------------------------
   PRIMARY       | 2/8(25%)
   LW            | 0/8(0%)
-  GCLK_PIN      | 10/30(34%)
+  GCLK_PIN      | 9/30(30%)
   PLL           | 0/6(0%)
   DDRDLL        | 0/4(0%)
   CLKDIV        | 0/16(0%)
@@ -123,9 +123,10 @@ tacSW[1]     |           | L5/1          | Y          | in    | IOT63[A] | LVCMO
 toggleSW[0]  |           | L9/0          | Y          | in    | IOT31[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 toggleSW[1]  |           | J8/0          | Y          | in    | IOT56[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 toggleSW[2]  |           | F7/0          | Y          | in    | IOT58[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+direction    |           | L2/2          | Y          | in    | IOR18[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 HS[0]        |           | A11/6         | Y          | in    | IOL14[A] | LVCMOS33   | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 HS[1]        |           | K11/7         | Y          | in    | IOT11[A] | LVCMOS33   | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
-HS[2]        |           | E11/6         | Y          | in    | IOL3[A]  | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+HS[2]        |           | E11/6         | Y          | in    | IOL3[A]  | LVCMOS33   | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 DOUT         |           | F2/5          | Y          | in    | IOB26[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 CAN_RX       |           | B11/6         | Y          | in    | IOL12[A] | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 AD_CLK       |           | F1/5          | Y          | out   | IOB26[B] | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
@@ -138,7 +139,7 @@ _LIN_R       |           | H8/1          | Y          | out   | IOT66[A] | LVCMO
 _LIN_S       |           | F5/1          | Y          | out   | IOT72[A] | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 _LIN_T       |           | G7/1          | Y          | out   | IOT68[A] | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 CAN_LED0     |           | E10/6         | N          | out   | IOL3[B]  | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
-CAN_LED1     |           | J1/2          | N          | out   | IOR33[A] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
+CAN_LED1     |           | K4/2          | N          | out   | IOR22[B] | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 CAN_S        |           | D11/6         | Y          | out   | IOL9[A]  | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 CAN_TX       |           | C11/6         | Y          | out   | IOL5[A]  | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
 CAN_WS       |           | G11/7         | Y          | out   | IOT7[A]  | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM       
@@ -214,7 +215,7 @@ H4/3     | -            | in    | IOB89[B] | LVCMOS33 | 8     | UP        | OFF 
 H1/3     | -            | in    | IOB91[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 H2/3     | -            | in    | IOB91[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-E11/6    | HS[2]        | in    | IOL3[A]  | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+E11/6    | HS[2]        | in    | IOL3[A]  | LVCMOS33 | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 E10/6    | CAN_LED0     | out   | IOL3[B]  | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 C11/6    | CAN_TX       | out   | IOL5[A]  | LVCMOS33 | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 C10/6    | -            | in    | IOL5[B]  | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
@@ -229,17 +230,17 @@ C1/10    | -            | in    | IOR1[A]  | LVCMOS33 | 8     | UP        | OFF 
 A3/10    | -            | in    | IOR1[B]  | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 B1/10    | -            | in    | IOR3[A]  | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 A2/10    | -            | out   | IOR3[B]  | LVCMOS33 | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-L2/2     | -            | in    | IOR18[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+L2/2     | direction    | in    | IOR18[A] | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L1/2     | -            | in    | IOR18[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 K1/2     | -            | in    | IOR20[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 K2/2     | -            | in    | IOR20[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 J4/2     | -            | in    | IOR22[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-K4/2     | -            | in    | IOR22[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+K4/2     | CAN_LED1     | out   | IOR22[B] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 G2/2     | -            | in    | IOR24[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 G1/2     | -            | in    | IOR24[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L4/2     | -            | in    | IOR31[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 L3/2     | -            | in    | IOR31[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
-J1/2     | CAN_LED1     | out   | IOR33[A] | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
+J1/2     | -            | in    | IOR33[A] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 J2/2     | -            | in    | IOR33[B] | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 =========================================================================================================================================================================================

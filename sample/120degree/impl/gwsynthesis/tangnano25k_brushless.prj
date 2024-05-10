@@ -13,7 +13,7 @@
         <Option type="looplimit" value="2000"/>
         <Option type="output_file" value="H:\git\TangPrimer25K_brushless\sample\120degree\impl\gwsynthesis\tangnano25k_brushless.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
-        <Option type="ram_rw_check" value="0"/>
+        <Option type="ram_rw_check" value="1"/>
         <Option type="top_module" value="top"/>
         <Option type="verilog_language" value="sysv-2017"/>
         <Option type="vhdl_language" value="vhdl-1993"/>
