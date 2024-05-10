@@ -5,6 +5,7 @@ module top (
 
   input wire[1:0] tacSW,  // tac SW1-2
   input wire[2:0] toggleSW,  //toggle SW 1-3
+  input wire direction,
   input  wire[2:0] HS,  //HallSensor
   output wire AD_CLK,  // for MCP3008(ADC)
   output logic CS,  // for MCP3008
@@ -57,7 +58,7 @@ module top (
     end else begin
 
 // rotation by hall sensor
-      if(toggleSW[0])begin   //CW
+      if(direction)begin   //CW
         case(HS)
           3'd1: rotateState = 3'd4;
           3'd2: rotateState = 3'd0;

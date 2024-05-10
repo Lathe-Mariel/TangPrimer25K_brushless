@@ -1,9 +1,9 @@
 [
  {
-  "InstFile" : "H:/git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
+  "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
   "InstLine" : 3,
   "InstName" : "top",
-  "ModuleFile" : "H:/git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
+  "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/120degree/src/top.sv",
   "ModuleLine" : 3,
   "ModuleName" : "top"
  }
