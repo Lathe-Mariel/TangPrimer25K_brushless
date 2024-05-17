@@ -26,4 +26,4 @@ You can download Gowin EDA without any cost.
 
 # Schematics
 
-[](tang25.png)
+![](tang25.png)
