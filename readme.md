@@ -22,3 +22,8 @@ BP5293-50 | 5VDCDCコンバータ | 1
 There's a sample project in sample directory.  
 The project is files for Gowin EDA which is IDE for Gowin FPGA.
 You can download Gowin EDA without any cost.
+
+
+# Schematics
+
+![](tang25.png)

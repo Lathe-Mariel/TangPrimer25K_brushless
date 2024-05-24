@@ -1,0 +1,14 @@
+-d H:\git\TangPrimer25K_brushless\sample\120degree\impl\gwsynthesis\tangnano25k_brushless.vg
+-p GW5A-25A-MBGA121N-1
+-pn GW5A-LV25MG121NES
+-cst H:\git\TangPrimer25K_brushless\sample\120degree\src\top.cst
+-cfg H:\git\TangPrimer25K_brushless\sample\120degree\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000
+-enable_dsrm 0
