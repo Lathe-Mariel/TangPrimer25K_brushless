@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}
