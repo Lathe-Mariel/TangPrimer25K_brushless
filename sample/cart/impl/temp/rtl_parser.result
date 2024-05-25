@@ -5,40 +5,42 @@
   "InstName" : "top",
   "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
   "ModuleLine" : 3,
-  "ModuleName" : "top"
- },
- {
-  "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
-  "InstLine" : 4,
-  "InstName" : "can_controller",
-  "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
-  "ModuleLine" : 4,
-  "ModuleName" : "can_controller",
+  "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
-    "InstLine" : 41,
-    "InstName" : "can_sender_i",
-    "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_sender.sv",
+    "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
+    "InstLine" : 78,
+    "InstName" : "vehicle_data_generator_i",
+    "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
     "ModuleLine" : 4,
-    "ModuleName" : "can_sender"
+    "ModuleName" : "vehicle_data_generator"
    },
    {
-    "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
-    "InstLine" : 49,
-    "InstName" : "can_synchronizer_i",
-    "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_synchronizer.sv",
+    "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
+    "InstLine" : 94,
+    "InstName" : "can_controller_i",
+    "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
     "ModuleLine" : 4,
-    "ModuleName" : "can_synchronizer"
+    "ModuleName" : "can_controller",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
+      "InstLine" : 41,
+      "InstName" : "can_sender_i",
+      "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_sender.sv",
+      "ModuleLine" : 4,
+      "ModuleName" : "can_sender"
+     },
+     {
+      "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
+      "InstLine" : 49,
+      "InstName" : "can_synchronizer_i",
+      "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_synchronizer.sv",
+      "ModuleLine" : 4,
+      "ModuleName" : "can_synchronizer"
+     }
+    ]
    }
   ]
- },
- {
-  "InstFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
-  "InstLine" : 4,
-  "InstName" : "vehicle_data_generator",
-  "ModuleFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
-  "ModuleLine" : 4,
-  "ModuleName" : "vehicle_data_generator"
  }
 ]

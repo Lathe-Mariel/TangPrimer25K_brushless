@@ -2,10 +2,6 @@
  "Device" : "GW5A-25A",
  "Files" : [
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
    "Type" : "verilog"
   },
@@ -15,6 +11,10 @@
   },
   {
    "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_synchronizer.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
    "Type" : "verilog"
   },
   {
