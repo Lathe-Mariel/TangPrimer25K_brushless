@@ -3,6 +3,7 @@
 -pn GW5A-LV25MG121NES
 -cst H:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
 -cfg H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\device.cfg
+-sdc H:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
 -bit
 -tr
 -ph
