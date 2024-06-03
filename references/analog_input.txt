@@ -1,0 +1,8 @@
+CH7    C10-28
+CH6    C10-34
+CH5    ACCEL
+CH4    C7-38    W_phase
+CH3    C7-36    V_phase
+CH2    A-IN
+CH1    C7-30    Battery
+CH0    C7-28    U_phase

@@ -38,7 +38,7 @@ module top (
   wire status_warning;
   wire status_bus_off;
   logic [13:0] engine_rev;
-  wire [8:0]  vehicle_speed;
+  logic [8:0]  vehicle_speed;  // Motor current
   wire [63:0] stm_send_data_tdata;
   wire [10:0] stm_send_data_tid;
   wire [7:0]  stm_send_data_tkeep;
@@ -58,14 +58,16 @@ module top (
   logic _LS;
   logic _LT;
   logic[15:0] processCounter;  // general counter 
-  logic[9:0] HSCounter;  // measurement hall sensor pulse
-  logic isRotate;  // for control forcedRotation
-  logic[2:0] oldHS;  // old Hall Sensor value
+  logic[9:0] HSCounter;   // measurement hall sensor pulse
+  logic isRotate;         // for control forcedRotation
+  logic[2:0] oldHS;       // old Hall Sensor value
 
   logic[1:0] tacSWpushed; // flag for tac_SW1-4
 
   logic[9:0] recieveADC;  // adc data from MCP3008
-  logic[9:0] accel;  // accel value, that is transformed from recieveADC
+  logic[9:0] accel;       // accel value, that is transformed from recieveADC
+
+  logic[9:0] analog_scan[8];
 
   logic[11:0] dutyList[8]={'d1400, 'd1000, 'd800, 'd700, 'd620, 'd560, 'd520, 'd500};
   logic[2:0] dutyPara;
@@ -161,7 +163,7 @@ module top (
           dutyPara <= 'd0;
         end
 
-        engine_rev <= HSCounter * 10'd10;
+        engine_rev <= HSCounter * 10'd2;
 
       end
       tacSWpushed[1] <= tacSW[1];
@@ -194,13 +196,16 @@ module top (
       DIN <= 1;
       CS <= 0;
     end else if(processCounter[4:0] == 5'd10)begin  // D2
-      DIN <= 1;
+//    DIN <= 1;
+      DIN <= processCounter[5];
       CS <= 0;
     end else if(processCounter[4:0] == 5'd11)begin  // D1
-      DIN <= 0;
+//    DIN <= 0;
+      DIN <= processCounter[6];
       CS <= 0;
     end else if(processCounter[4:0] == 5'd12)begin  // D0
-      DIN <= 1;
+//      DIN <= 1;
+      DIN <= processCounter[7];
       CS <= 0;
     end else if(processCounter[4:0] < 5'd15)begin  // 0
       CS <= 0;
@@ -208,13 +213,18 @@ module top (
       recieveADC[24 - processCounter[4:0]] <= DOUT;
       DIN <= 0;
       CS <= 0;
+    end else if(processCounter[4:0] == 5'd25)begin
+      analog_scan[processCounter[7:5]] <= recieveADC;
     end else begin
-      if(recieveADC < 'd280)begin
+
+      vehicle_speed <= analog_scan[0];
+
+      if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
-      end else if(recieveADC > 'd780) begin
+      end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        accel <= (recieveADC - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780  to 0 - 16
+        accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780  to 0 - 16
       end
 
       DIN <= 0;
@@ -241,8 +251,8 @@ module top (
 
   assign AD_CLK = controlCLK;
 
-  assign CAN_LED0 = processCounter[11];
-  assign CAN_LED1 = ~processCounter[12];
+//  assign CAN_LED0 = processCounter[11];
+//  assign CAN_LED1 = ~processCounter[12];
 
   assign _LIN_R = ~(~_LR * duty);
   assign _LIN_S = ~(~_LS * duty);
@@ -250,7 +260,7 @@ module top (
 
 
 // generate pulse
-  parameter COUNT_MAX = 1350;  //100us for controllCLK
+  parameter COUNT_MAX = 2700;  //100us for controllCLK
 
   logic [11:0] counter = 'd0;
   logic [11:0] counterB = 'd0;
