@@ -13389,10 +13389,34 @@
 		(layer "Edge.Cuts")
 		(uuid "1112fb9a-cc3f-4735-b593-229958c728b3")
 	)
+	(gr_text "GND"
+		(at 136.525 112.776 0)
+		(layer "B.SilkS")
+		(uuid "0947b970-5037-4195-8f86-509b07ed1c0d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "DIR"
 		(at 188.976 89.916 0)
 		(layer "B.SilkS")
 		(uuid "09f90c06-75cc-4848-8c92-1ead109240e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "12V"
+		(at 136.398 115.443 -0)
+		(layer "B.SilkS")
+		(uuid "32ae733b-5648-409e-aaa3-61bfe9d9201d")
 		(effects
 			(font
 				(size 1 1)

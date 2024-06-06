@@ -55,15 +55,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>H:\git\TangPrimer25K_brushless\sample\120degree\impl\gwsynthesis\tangnano25k_brushless.vg</td>
+<td>H:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>H:\git\TangPrimer25K_brushless\sample\120degree\src\top.cst</td>
+<td>H:\git\TangPrimer25K_brushless\sample\cart\src\top.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
-<td>---</td>
+<td>H:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc</td>
 </tr>
 <tr>
 <td class="label">Tool Version</td>
@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Sat May 11 01:12:40 2024
+<td>Fri Jun  7 00:48:40 2024
 </td>
 </tr>
 <tr>
@@ -97,15 +97,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.042s, Elapsed time = 0h 0m 0.043s
-   Placement Phase 1: CPU time = 0h 0m 0.33s, Elapsed time = 0h 0m 0.33s
-   Placement Phase 2: CPU time = 0h 0m 0.011s, Elapsed time = 0h 0m 0.011s
-   Placement Phase 3: CPU time = 0h 0m 0.642s, Elapsed time = 0h 0m 0.641s
+   Placement Phase 0: CPU time = 0h 0m 0.113s, Elapsed time = 0h 0m 0.113s
+   Placement Phase 1: CPU time = 0h 0m 0.313s, Elapsed time = 0h 0m 0.313s
+   Placement Phase 2: CPU time = 0h 0m 0.09s, Elapsed time = 0h 0m 0.09s
+   Placement Phase 3: CPU time = 0h 0m 0.754s, Elapsed time = 0h 0m 0.753s
    Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 Running routing:
-   Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+   Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
    Routing Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
-   Routing Phase 2: CPU time = 0h 0m 0.106s, Elapsed time = 0h 0m 0.105s
+   Routing Phase 2: CPU time = 0h 0m 0.104s, Elapsed time = 0h 0m 0.104s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
    Total Routing: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
 Generate output files:
@@ -114,7 +114,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 475MB</td>
+<td>CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 474MB</td>
 </tr>
 </table>
 <br/>
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>181/23040</td>
-<td><1%</td>
+<td>546/23040</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>181(110 LUT, 71 ALU, 0 ROM16)</td>
+<td>546(438 LUT, 108 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -144,8 +144,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>101/23280</td>
-<td><1%</td>
+<td>251/23280</td>
+<td>2%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as Latch</td>
@@ -154,8 +154,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>89/23040</td>
-<td><1%</td>
+<td>238/23040</td>
+<td>2%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -164,13 +164,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as FF</td>
-<td>6/240</td>
+<td>7/240</td>
 <td>3%</td>
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>110/11520</td>
-<td><1%</td>
+<td>330/11520</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
@@ -179,12 +179,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">I/O Buf</td>
-<td>22</td>
+<td>23</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Input Buf</td>
-<td>8</td>
+<td>9</td>
 <td>-</td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">DSP</td>
-<td>0</td><td>0%</td>
+<td>1 MULT12X12<br/></td><td>2%</td>
 </tr>
 <tr>
 <td class="label">PLL</td>
@@ -317,7 +317,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">GCLK_PIN</td>
-<td>9/30(30%)</td>
+<td>10/30(34%)</td>
 </tr>
 <tr>
 <td class="label">PLL</td>
@@ -345,14 +345,14 @@ Generate output files:
 <td><b>Location</b></td>
 </tr>
 <tr>
-<td class="label">n578_15</td>
+<td class="label">n1812_15</td>
 <td>PRIMARY</td>
 <td> TR TL</td>
 </tr>
 <tr>
 <td class="label">AD_CLK_d</td>
 <td>PRIMARY</td>
-<td> TR TL BR BL</td>
+<td> TR TL BL</td>
 </tr>
 </table>
 <br/>
@@ -587,7 +587,7 @@ Generate output files:
 <td>MEDIUM</td>
 </tr>
 <tr>
-<td class="label">CAN_RX</td>
+<td class="label">rxd</td>
 <td></td>
 <td>B11/6</td>
 <td>Y</td>
@@ -595,7 +595,7 @@ Generate output files:
 <td>IOL12[A]</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -779,10 +779,10 @@ Generate output files:
 <tr>
 <td class="label">CAN_LED0</td>
 <td></td>
-<td>E10/6</td>
+<td>C10/6</td>
 <td>N</td>
 <td>out</td>
-<td>IOL3[B]</td>
+<td>IOL5[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -798,10 +798,10 @@ Generate output files:
 <tr>
 <td class="label">CAN_LED1</td>
 <td></td>
-<td>K4/2</td>
+<td>L3/2</td>
 <td>N</td>
 <td>out</td>
-<td>IOR22[B]</td>
+<td>IOR31[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -815,7 +815,7 @@ Generate output files:
 <td>MEDIUM</td>
 </tr>
 <tr>
-<td class="label">CAN_S</td>
+<td class="label">s</td>
 <td></td>
 <td>D11/6</td>
 <td>Y</td>
@@ -823,7 +823,7 @@ Generate output files:
 <td>IOL9[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -834,7 +834,7 @@ Generate output files:
 <td>MEDIUM</td>
 </tr>
 <tr>
-<td class="label">CAN_TX</td>
+<td class="label">txd</td>
 <td></td>
 <td>C11/6</td>
 <td>Y</td>
@@ -842,7 +842,7 @@ Generate output files:
 <td>IOL5[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -861,7 +861,7 @@ Generate output files:
 <td>IOT7[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -967,7 +967,7 @@ Generate output files:
 <td>IOT7[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -1931,43 +1931,9 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">E10/6</td>
-<td>CAN_LED0</td>
-<td>out</td>
-<td>IOL3[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
-<td>NONE</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>3.3</td>
-<td>MEDIUM</td>
-</tr>
-<tr>
-<td class="label">C11/6</td>
-<td>CAN_TX</td>
-<td>out</td>
-<td>IOL5[A]</td>
-<td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>OFF</td>
-<td>3.3</td>
-<td>MEDIUM</td>
-</tr>
-<tr>
-<td class="label">C10/6</td>
 <td>-</td>
 <td>in</td>
-<td>IOL5[B]</td>
+<td>IOL3[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>UP</td>
@@ -1981,13 +1947,47 @@ Generate output files:
 <td>MEDIUM</td>
 </tr>
 <tr>
+<td class="label">C11/6</td>
+<td>txd</td>
+<td>out</td>
+<td>IOL5[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td class="label">C10/6</td>
+<td>CAN_LED0</td>
+<td>out</td>
+<td>IOL5[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
 <td class="label">D11/6</td>
-<td>CAN_S</td>
+<td>s</td>
 <td>out</td>
 <td>IOL9[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -2016,12 +2016,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">B11/6</td>
-<td>CAN_RX</td>
+<td>rxd</td>
 <td>in</td>
 <td>IOL12[A]</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -2237,14 +2237,14 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">K4/2</td>
-<td>CAN_LED1</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOR22[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>NONE</td>
+<td>UP</td>
 <td>OFF</td>
-<td>OFF</td>
+<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -2305,14 +2305,14 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">L3/2</td>
-<td>-</td>
-<td>in</td>
+<td>CAN_LED1</td>
+<td>out</td>
 <td>IOR31[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
-<td>ON</td>
+<td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
