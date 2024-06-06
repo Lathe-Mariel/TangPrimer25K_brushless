@@ -163,7 +163,7 @@ module top (
           dutyPara <= 'd0;
         end
 
-        engine_rev <= HSCounter * 10'd2;
+        engine_rev <= HSCounter * 10'd50;
 
       end
       tacSWpushed[1] <= tacSW[1];
@@ -217,7 +217,7 @@ module top (
       analog_scan[processCounter[7:5]] <= recieveADC;
     end else begin
 
-      vehicle_speed <= analog_scan[0];
+      vehicle_speed <= analog_scan[0] >> 5;
 
       if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
