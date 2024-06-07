@@ -1,9 +1,9 @@
--d C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
+-d H:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
 -p GW5A-25A-MBGA121N-1
 -pn GW5A-LV25MG121NES
--cst C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst
--cfg C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\device.cfg
--sdc C:\Git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
+-cst H:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
+-cfg H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\device.cfg
+-sdc H:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
 -bit
 -tr
 -ph
