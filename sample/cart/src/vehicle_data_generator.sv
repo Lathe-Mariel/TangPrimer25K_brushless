@@ -2,13 +2,14 @@
 
 // エンジン回転数と車速を送信するモジュール
 module vehicle_data_generator #(
-  parameter SLEEP_CYCLE   = 50_000_000, // データ送信後、スリープするcycle 数
-  parameter ID_ENGINE_REV = 11'h3D9,    // エンジン回転数送信時のID
-  parameter ID_CAR_SPEED  = 11'h3E9     // 車速送信時のID
+  parameter SLEEP_CYCLE   = 50_000_000,       // データ送信後、スリープするcycle 数
+  parameter ID_ENGINE_REV = 11'h3D9,          // エンジン回転数送信時のID
+  parameter ID_CAR_SPEED  = 11'h3E9           // 車速送信時のID
 ) (
-  input  wire clk,                  // クロック入力
-  input  wire [13:0] engine_rev,    // エンジン回転数入力
-  input  wire [8:0]  vehicle_speed, // 車速入力
+  input  wire clk,                            // クロック入力
+  input  wire [13:0] engine_rev,              // エンジン回転数入力
+  input  wire [8:0]  vehicle_speed,           // 車速入力
+  input  wire [7:0]  battery_value,           // バッテリ残量
   // AXI4-Stream 出力
   output wire [63:0] stm_send_data_out_tdata, // 送信データ
   output wire [10:0] stm_send_data_out_tid,   // 送信ID
@@ -25,7 +26,7 @@ module vehicle_data_generator #(
 );
 
   // 入出力との接続
-  assign stm_send_data_out_tdata = (state == STATE_SEND_ENGINE_REV)? {16'd0, engine_rev, 2'd0, 32'd0}:
+  assign stm_send_data_out_tdata = (state == STATE_SEND_ENGINE_REV)? {8'd0, battery_value, engine_rev, 2'd0, 32'd0}:
                                    (state == STATE_SEND_CAR_SPEED)?  {vehicle_speed, 7'd0, 48'd0}:
                                                                      'd0;
   assign stm_send_data_out_tid = (state == STATE_SEND_ENGINE_REV)? ID_ENGINE_REV:

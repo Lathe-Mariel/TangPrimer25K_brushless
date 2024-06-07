@@ -6,39 +6,40 @@ module top (
   input wire[1:0] tacSW,     // tac SW1-2
   input wire[2:0] toggleSW,  //toggle SW 1-3
   input wire direction,
-  input  wire[2:0] HS,  //HallSensor
-  output wire AD_CLK,   // for MCP3008(ADC)
-  output logic CS,      // for MCP3008
-  output logic DIN,     //for MCP3008
-  input reg DOUT,       //for MCP3008
-  output logic HIN_R,   // Upper arm
+  input  wire[2:0] HS,       //HallSensor
+  output wire AD_CLK,        // for MCP3008(ADC)
+  output logic CS,           // for MCP3008
+  output logic DIN,          //for MCP3008
+  input reg DOUT,            //for MCP3008
+  output logic HIN_R,        // Upper arm
   output logic HIN_S,
   output logic HIN_T,
-  output logic _LIN_R,  //Lower arm
+  output logic _LIN_R,       //Lower arm
   output logic _LIN_S,
   output logic _LIN_T,
   output logic CAN_LED0,
   output logic CAN_LED1,
-  output logic s,       //CAN Mode Select
-  output logic txd,     //CAN データ送信線
-  input wire rxd,       //CAN データ受信線
+  output logic s,            //CAN Mode Select
+  output logic txd,          //CAN データ送信線
+  input wire rxd,            //CAN データ受信線
   output logic CAN_WS
 );
 
   localparam CLK_FREQ_HZ    = 50_000_000;         // 入力クロック周波数
   localparam CAN_BITRATE_HZ = 500_000;            // CAN のビットレート
   localparam SLEEP_CYCLE    = CLK_FREQ_HZ / 100;  // データ送信後、スリープするcycle 数
-  localparam ID_ENGINE_REV  = 11'h3E9;            // 電流の送信ID
-  localparam ID_CAR_SPEED   = 11'h3D9;            // モータ回転数の送信ID
+  localparam ID_ENGINE_REV  = 11'h3D9;            // 電流の送信ID
+  localparam ID_CAR_SPEED   = 11'h3E9;            // モータ回転数の送信ID
 
-  // Normal mode に固定
+  // Pmod CAN制御用，Normal mode に固定
   assign s = 1'b0;
 
   // モジュール間の接続に使用する変数
   wire status_warning;
   wire status_bus_off;
-  logic [13:0] engine_rev;     // Motor revolution
-  logic [8:0]  vehicle_speed;  // Motor current
+  logic [13:0] engine_rev;           // Motor revolution
+  logic [8:0]  vehicle_speed;        // Motor current
+  logic [7:0]  battery_value;        // Battery
   wire [63:0] stm_send_data_tdata;
   wire [10:0] stm_send_data_tid;
   wire [7:0]  stm_send_data_tkeep;
@@ -48,29 +49,29 @@ module top (
   wire        stm_result_tvalid;
   wire        stm_result_tready;
 
-  logic  controlCLK;
-  logic rotateCLK;
+  logic       controlCLK;
+  logic       rotateCLK;
   logic[10:0] forcedRotationCounter;  //強制転流用インターバルカウンタ
   logic[2:0]  rotateState;            // 120°矩形波のmode
   logic duty;                         // current duty state
-  logic[5:0] dutyCounter;             // for duty control(relate to accel)
+  logic[5:0]  dutyCounter;            // for duty control(relate to accel)
   logic _LR;                          // tmp value for lower arm value
   logic _LS;
   logic _LT;
   logic[15:0] processCounter;         // general counter 
-  logic[9:0] HSCounter;               // measurement hall sensor pulse
-  logic isRotate;                     // for control forcedRotation
-  logic[2:0] oldHS;                   // old Hall Sensor value
+  logic[9:0]  HSCounter;              // measurement hall sensor pulse
+  logic       isRotate;               // for control forcedRotation
+  logic[2:0]  oldHS;                  // old Hall Sensor value
 
-  logic[1:0] tacSWpushed;             // flag for tac_SW1-4
+  logic[1:0]  tacSWpushed;            // flag for tac_SW1-4
 
-  logic[9:0] recieveADC;              // adc data from MCP3008
-  logic[9:0] accel;                   // accel value, that is transformed from recieveADC
+  logic[9:0]  recieveADC;             // adc data from MCP3008
+  logic[9:0]  accel;                  // accel value, that is transformed from recieveADC
 
-  logic[9:0] analog_scan[8];
+  logic[9:0]  analog_scan[8];         // storing adc(MCP3008, 10bits) values
 
-  logic[11:0] dutyList[8]={'d1400, 'd1000, 'd800, 'd700, 'd620, 'd560, 'd520, 'd500};
-  logic[2:0] dutyPara;
+  logic[11:0] dutyList[8]={'d1400, 'd1000, 'd800, 'd700, 'd620, 'd560, 'd520, 'd500};  //ドレミファインバータ風
+  logic[2:0]  dutyPara;  //ドレミファインバータ制御用インデックス
 
 ///////// エンジン回転数と車速を送信するモジュール /////////
   vehicle_data_generator #(
@@ -219,7 +220,8 @@ module top (
       CS <= 1;
     end else begin
 
-      vehicle_speed <= analog_scan[0] >> 4;
+      vehicle_speed <= analog_scan[0] >> 4;     // for MCP3008 0ch(C7-28)
+      battery_value <= analog_scan[2] >> 2;     // for MCP3008 2ch(analog input)
 
       if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
