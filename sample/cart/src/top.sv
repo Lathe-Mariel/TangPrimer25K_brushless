@@ -220,8 +220,14 @@ module top (
       CS <= 1;
     end else begin
 
-      vehicle_speed <= analog_scan[0] >> (tacSW + 1);     // for MCP3008 0ch(C7-28)
-      battery_value <= analog_scan[2] ;     // for MCP3008 2ch(analog input)
+//      vehicle_speed <= analog_scan[0] >> 2;            // for MCP3008 0ch(C7-28)
+      if(analog_scan[0] < 'd240)begin
+        vehicle_speed <= 'd0;
+      end else begin
+        vehicle_speed <= (analog_scan[0] - 'd240) << 4;  // for 
+      end
+
+      battery_value <= analog_scan[2] >> tacSW ;                  // for MCP3008 2ch(analog input)
 
       if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
