@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="137" Alu="65" Lut="122" MULT12X12="1" T_Register="274(137)" T_Alu="103(65)" T_Lut="438(122)" T_MULT12X12="1(1)">
+<Module name="top" Register="143" Alu="65" Lut="122" MULT12X12="1" T_Register="283(143)" T_Alu="103(65)" T_Lut="440(122)" T_MULT12X12="1(1)">
     <SubModule name="vehicle_data_generator_i" Register="22" Alu="18" Lut="21" T_Register="22(22)" T_Alu="18(18)" T_Lut="21(21)"/>
-    <SubModule name="can_controller_i" T_Register="115(0)" T_Alu="20(0)" T_Lut="295(0)">
-        <SubModule name="can_sender_i" Register="73" Lut="187" T_Register="73(73)" T_Lut="187(187)"/>
-        <SubModule name="can_synchronizer_i" Register="42" Alu="20" Lut="108" T_Register="42(42)" T_Alu="20(20)" T_Lut="108(108)"/>
+    <SubModule name="can_controller_i" T_Register="118(0)" T_Alu="20(0)" T_Lut="297(0)">
+        <SubModule name="can_sender_i" Register="76" Lut="193" T_Register="76(76)" T_Lut="193(193)"/>
+        <SubModule name="can_synchronizer_i" Register="42" Alu="20" Lut="104" T_Register="42(42)" T_Alu="20(20)" T_Lut="104(104)"/>
     </SubModule>
 </Module>
