@@ -1,7 +1,7 @@
-Reading netlist file: "H:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"
-Parsing netlist file "H:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg" completed
+Reading netlist file: "C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"
+Parsing netlist file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg" completed
 Processing netlist completed
-Reading constraint file: "H:\git\TangPrimer25K_brushless\sample\cart\src\top.cst"
+Reading constraint file: "C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -18,9 +18,9 @@ Running timing analysis......
 Placement and routing completed
 Bitstream generation in progress......
 Bitstream generation completed
-Generate file "H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.pin.html" completed
-Generate file "H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.html" completed
-Generate file "H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.txt" completed
-Generate file "H:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.tr.html" completed
-Sat Jun  8 01:44:31 2024
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.pin.html" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.html" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.txt" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.tr.html" completed
+Sat Jun  8 18:46:38 2024
 
