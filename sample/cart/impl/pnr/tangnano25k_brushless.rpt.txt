@@ -12,27 +12,27 @@
   <Part Number>: GW5A-LV25MG121NES
   <Device>: GW5A-25
   <Device Version>: A
-  <Created Time>:Sun Jun  9 15:41:05 2024
+  <Created Time>:Mon Jun 10 22:06:51 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.05s, Elapsed time = 0h 0m 0.05s
-    Placement Phase 1: CPU time = 0h 0m 0.254s, Elapsed time = 0h 0m 0.253s
+    Placement Phase 0: CPU time = 0h 0m 0.059s, Elapsed time = 0h 0m 0.059s
+    Placement Phase 1: CPU time = 0h 0m 0.161s, Elapsed time = 0h 0m 0.161s
     Placement Phase 2: CPU time = 0h 0m 0.039s, Elapsed time = 0h 0m 0.039s
-    Placement Phase 3: CPU time = 0h 0m 0.3s, Elapsed time = 0h 0m 0.299s
-    Total Placement: CPU time = 0h 0m 0.643s, Elapsed time = 0h 0m 0.641s
+    Placement Phase 3: CPU time = 0h 0m 0.326s, Elapsed time = 0h 0m 0.326s
+    Total Placement: CPU time = 0h 0m 0.585s, Elapsed time = 0h 0m 0.585s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Routing Phase 1: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
-    Routing Phase 2: CPU time = 0h 0m 0.024s, Elapsed time = 0h 0m 0.024s
+    Routing Phase 2: CPU time = 0h 0m 0.032s, Elapsed time = 0h 0m 0.032s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
  Generate output files:
     CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 
- Total Time and Memory Usage: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 526MB
+ Total Time and Memory Usage: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 531MB
 
 
 3. Resource Usage Summary
@@ -40,15 +40,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 573/23040  3%
-    --LUT,ALU,ROM16           | 573(456 LUT, 117 ALU, 0 ROM16)
+  Logic                       | 580/23040  3%
+    --LUT,ALU,ROM16           | 580(471 LUT, 109 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 278/23280  2%
+  Register                    | 273/23280  2%
     --Logic Register as Latch | 3/23040  <1%
-    --Logic Register as FF    | 265/23040  2%
+    --Logic Register as FF    | 260/23040  2%
     --I/O Register as Latch   | 3/240  2%
     --I/O Register as FF      | 7/240  3%
-  CLS                         | 356/11520  4%
+  CLS                         | 355/11520  4%
   I/O Port                    | 26
   I/O Buf                     | 24
     --Input Buf               | 10
@@ -109,7 +109,7 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  n1952_15       | PRIMARY        |  TR TL
+  n1974_15       | PRIMARY        |  TL BR
   AD_CLK_d       | PRIMARY        |  TR TL BR BL
   ===========================================
 
