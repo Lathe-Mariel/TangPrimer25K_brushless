@@ -110,7 +110,7 @@ module top (
   always @(posedge controlCLK)begin
 
 // forced rotation
-    if(isRotate == 0)begin
+    if(HSCounter == 0)begin
       if(forcedRotationCounter == 0)begin
         rotateState <= (rotateState + 1) % 6;
       end
@@ -171,16 +171,13 @@ module top (
 
 // measure speed
 
-      if(HSCounter > 0)begin
-        isRotate <= 'b1;
-      end else begin
-        isRotate <= 'b0;
-      end
-      HSCounter <= 0;
+      HSCounter <= 1;
     end else begin
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
+      end else begin
+        HSCounter <= 0;
       end
     end
 
