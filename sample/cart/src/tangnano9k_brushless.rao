@@ -4,19 +4,19 @@
     <Mode>Lite</Mode>
     <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="4096" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
         <SignalList>
-            <Signal>duty</Signal>
-            <Bus name="rotateState[2:0]">
+            <Signal capture_enable="true">duty</Signal>
+            <Bus capture_enable="true" name="rotateState[2:0]">
                 <Signal>rotateState[2]</Signal>
                 <Signal>rotateState[1]</Signal>
                 <Signal>rotateState[0]</Signal>
             </Bus>
-            <Signal>HIN_R</Signal>
-            <Signal>HIN_S</Signal>
-            <Signal>HIN_T</Signal>
-            <Signal>CS</Signal>
-            <Signal>DIN</Signal>
-            <Signal>DOUT</Signal>
-            <Bus name="processCounter[5:0]">
+            <Signal capture_enable="true">HIN_R</Signal>
+            <Signal capture_enable="true">HIN_S</Signal>
+            <Signal capture_enable="true">HIN_T</Signal>
+            <Signal capture_enable="true">CS</Signal>
+            <Signal capture_enable="true">DIN</Signal>
+            <Signal capture_enable="true">DOUT</Signal>
+            <Bus capture_enable="true" name="processCounter[5:0]">
                 <Signal>processCounter[5]</Signal>
                 <Signal>processCounter[4]</Signal>
                 <Signal>processCounter[3]</Signal>
@@ -24,7 +24,8 @@
                 <Signal>processCounter[1]</Signal>
                 <Signal>processCounter[0]</Signal>
             </Bus>
+            <Signal capture_enable="true">isRotate</Signal>
         </SignalList>
     </AoCore_Lite>
-    <GAO_ID>0101010111011111</GAO_ID>
+    <GAO_ID>1000110000010100</GAO_ID>
 </GAO_CONFIG>

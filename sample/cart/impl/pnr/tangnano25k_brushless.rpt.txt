@@ -5,34 +5,34 @@
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
-  <Physical Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst
-  <Timing Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
+  <Design File>: E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
+  <Physical Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
+  <Timing Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
   <Tool Version>: V1.9.9.03 (64-bit)
   <Part Number>: GW5A-LV25MG121NES
   <Device>: GW5A-25
   <Device Version>: A
-  <Created Time>:Wed Aug 14 18:57:29 2024
+  <Created Time>:Wed Aug 14 20:32:04 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.044s, Elapsed time = 0h 0m 0.045s
-    Placement Phase 1: CPU time = 0h 0m 0.224s, Elapsed time = 0h 0m 0.223s
-    Placement Phase 2: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.046s
-    Placement Phase 3: CPU time = 0h 0m 0.317s, Elapsed time = 0h 0m 0.317s
-    Total Placement: CPU time = 0h 0m 0.631s, Elapsed time = 0h 0m 0.631s
+    Placement Phase 0: CPU time = 0h 0m 0.056s, Elapsed time = 0h 0m 0.057s
+    Placement Phase 1: CPU time = 0h 0m 0.167s, Elapsed time = 0h 0m 0.167s
+    Placement Phase 2: CPU time = 0h 0m 0.07s, Elapsed time = 0h 0m 0.07s
+    Placement Phase 3: CPU time = 0h 0m 0.378s, Elapsed time = 0h 0m 0.378s
+    Total Placement: CPU time = 0h 0m 0.671s, Elapsed time = 0h 0m 0.672s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Routing Phase 1: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
-    Routing Phase 2: CPU time = 0h 0m 0.024s, Elapsed time = 0h 0m 0.024s
+    Routing Phase 2: CPU time = 0h 0m 0.028s, Elapsed time = 0h 0m 0.028s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
  Generate output files:
-    CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+    CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 
- Total Time and Memory Usage: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 622MB
+ Total Time and Memory Usage: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 478MB
 
 
 3. Resource Usage Summary
@@ -40,15 +40,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 584/23040  3%
-    --LUT,ALU,ROM16           | 584(485 LUT, 99 ALU, 0 ROM16)
+  Logic                       | 569/23040  3%
+    --LUT,ALU,ROM16           | 569(461 LUT, 108 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
   Register                    | 272/23280  2%
     --Logic Register as Latch | 3/23040  <1%
-    --Logic Register as FF    | 259/23040  2%
+    --Logic Register as FF    | 260/23040  2%
     --I/O Register as Latch   | 3/240  2%
-    --I/O Register as FF      | 7/240  3%
-  CLS                         | 359/11520  4%
+    --I/O Register as FF      | 6/240  3%
+  CLS                         | 350/11520  4%
   I/O Port                    | 26
   I/O Buf                     | 24
     --Input Buf               | 10
@@ -109,7 +109,7 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  n1970_15       | PRIMARY        |  TL BR
+  n1948_15       | PRIMARY        |  TL BR
   AD_CLK_d       | PRIMARY        |  TR TL BR BL
   ===========================================
 

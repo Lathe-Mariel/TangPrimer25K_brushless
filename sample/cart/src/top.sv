@@ -110,11 +110,11 @@ module top (
   always @(posedge controlCLK)begin
 
 // forced rotation
-    if(HSCounter == 0)begin
+    if(isRotate == 0)begin
       if(forcedRotationCounter == 0)begin
         rotateState <= (rotateState + 1) % 6;
       end
-        forcedRotationCounter <= forcedRotationCounter + 1;
+      forcedRotationCounter <= forcedRotationCounter + 1;
     end else begin
 
 // rotation by hall sensor
@@ -143,41 +143,38 @@ module top (
 
 // check sw //change something to display
     if(processCounter % 2048 == 0)begin
-      if(tacSW[1] != tacSWpushed[1] && tacSWpushed[1] == 1)begin
-        dutyPara <= dutyPara + 'd1;
+      if(HSCounter > 42)begin
+        dutyPara <= 'd7;
+      end else if(HSCounter > 34)begin
+        dutyPara <= 'd6;
+      end else if(HSCounter > 27)begin
+        dutyPara <= 'd5;
+      end else if(HSCounter > 20)begin
+        dutyPara <= 'd4;
+      end else if(HSCounter > 14)begin
+        dutyPara <= 'd3;
+      end else if(HSCounter > 9)begin
+        dutyPara <= 'd2;
+      end else if(HSCounter > 5)begin
+        dutyPara <= 'd1;
       end else begin
-        if(HSCounter > 42)begin
-          dutyPara <= 'd7;
-        end else if(HSCounter > 34)begin
-          dutyPara <= 'd6;
-        end else if(HSCounter > 27)begin
-          dutyPara <= 'd5;
-        end else if(HSCounter > 20)begin
-          dutyPara <= 'd4;
-        end else if(HSCounter > 14)begin
-          dutyPara <= 'd3;
-        end else if(HSCounter > 9)begin
-          dutyPara <= 'd2;
-        end else if(HSCounter > 5)begin
-          dutyPara <= 'd1;
-        end else begin
-          dutyPara <= 'd0;
-        end
-
-        engine_rev <= HSCounter * 10'd50;
-
+        dutyPara <= 'd0;
       end
-      tacSWpushed[1] <= tacSW[1];
 
+      engine_rev <= HSCounter * 10'd50;
+      HSCounter <= 0;
+    
 // measure speed
+      if(HSCounter > 0)begin
+        isRotate <= 'b1;
+      end else begin
+        isRotate <= 'b0;
+      end
 
-      HSCounter <= 1;
-    end else begin
+    end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
-      end else begin
-        HSCounter <= 0;
       end
     end
 

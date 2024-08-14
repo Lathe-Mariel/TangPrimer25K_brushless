@@ -15,6 +15,7 @@ module gw_gao(
     \processCounter[2] ,
     \processCounter[1] ,
     \processCounter[0] ,
+    isRotate,
     controlCLK,
     tms_pad_i,
     tck_pad_i,
@@ -38,6 +39,7 @@ input \processCounter[3] ;
 input \processCounter[2] ;
 input \processCounter[1] ;
 input \processCounter[0] ;
+input isRotate;
 input controlCLK;
 input tms_pad_i;
 input tck_pad_i;
@@ -60,6 +62,7 @@ wire \processCounter[3] ;
 wire \processCounter[2] ;
 wire \processCounter[1] ;
 wire \processCounter[0] ;
+wire isRotate;
 wire controlCLK;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -134,7 +137,7 @@ gw_con_top  u_icon_top(
 
 ao_top u_ao_top(
     .control(control0[9:0]),
-    .data_i({duty,\rotateState[2] ,\rotateState[1] ,\rotateState[0] ,HIN_R,HIN_S,HIN_T,CS,DIN,DOUT,\processCounter[5] ,\processCounter[4] ,\processCounter[3] ,\processCounter[2] ,\processCounter[1] ,\processCounter[0] }),
+    .data_i({duty,\rotateState[2] ,\rotateState[1] ,\rotateState[0] ,HIN_R,HIN_S,HIN_T,CS,DIN,DOUT,\processCounter[5] ,\processCounter[4] ,\processCounter[3] ,\processCounter[2] ,\processCounter[1] ,\processCounter[0] ,isRotate}),
     .clk_i(controlCLK)
 );
 
