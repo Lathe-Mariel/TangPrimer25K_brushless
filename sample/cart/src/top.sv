@@ -163,7 +163,7 @@ module top (
 
       engine_rev <= HSCounter * 10'd50;
       HSCounter <= 0;
-    
+
 // measure speed
       if(HSCounter > 0)begin
         isRotate <= 'b1;
@@ -175,6 +175,8 @@ module top (
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
+      end else begin
+        HSCounter <= HSCounter;
       end
     end
 
