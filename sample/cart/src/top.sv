@@ -177,6 +177,7 @@ module top (
         oldHS <= HS;
       end else begin
         HSCounter <= HSCounter;
+        oldHS <= HS;
       end
     end
 

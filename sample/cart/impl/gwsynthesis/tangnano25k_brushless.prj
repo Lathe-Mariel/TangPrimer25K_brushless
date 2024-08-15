@@ -4,18 +4,18 @@
     <Version>beta</Version>
     <Device id="GW5A-25A" package="MBGA121N" speed="1" partNumber="GW5A-LV25MG121NES"/>
     <FileList>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_controller.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_sender.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\top.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_controller.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_sender.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="enable_dsrm" value="0"/>
         <Option type="global_freq" value="100.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"/>
+        <Option type="output_file" value="E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="1"/>
         <Option type="top_module" value="top"/>
