@@ -68,10 +68,10 @@ IO_PORT "rxd" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
 IO_LOC "CAN_WS" G11;
 IO_PORT "CAN_WS" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
 
-# When use PMOD_A
-#IO_LOC "s"   G8;
-#IO_LOC "txd" H7;
-#IO_LOC "rxd" J5;
+// When use PMOD_A
+//IO_LOC "s"   G8;
+//IO_LOC "txd" H7;
+//IO_LOC "rxd" J5;
 
 //
 IO_LOC "clk" E2;

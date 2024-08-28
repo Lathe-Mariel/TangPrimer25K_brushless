@@ -142,26 +142,26 @@ module top (
     processCounter <= processCounter + 1;
 
 // check sw //change something to display
-    if(processCounter % 2048 == 0)begin
-      if(HSCounter > 42)begin
+    if(processCounter % 4096 == 0)begin
+      if(HSCounter > 84)begin
         dutyPara <= 'd7;
-      end else if(HSCounter > 34)begin
+      end else if(HSCounter > 68)begin
         dutyPara <= 'd6;
-      end else if(HSCounter > 27)begin
+      end else if(HSCounter > 54)begin
         dutyPara <= 'd5;
-      end else if(HSCounter > 20)begin
+      end else if(HSCounter > 40)begin
         dutyPara <= 'd4;
-      end else if(HSCounter > 14)begin
+      end else if(HSCounter > 28)begin
         dutyPara <= 'd3;
-      end else if(HSCounter > 9)begin
+      end else if(HSCounter > 18)begin
         dutyPara <= 'd2;
-      end else if(HSCounter > 5)begin
+      end else if(HSCounter > 10)begin
         dutyPara <= 'd1;
       end else begin
         dutyPara <= 'd0;
       end
 
-      engine_rev <= HSCounter * 10'd50;
+      engine_rev <= HSCounter * 10'd3;
       HSCounter <= 0;
 
 // measure speed
@@ -221,7 +221,8 @@ module top (
       if(analog_scan[7] < 'd750)begin
         vehicle_speed <= 'd0;
       end else begin
-        vehicle_speed <= (analog_scan[7] - 'd750) >> tacSW  ;  // for 
+        vehicle_speed <= 'd0;
+        //vehicle_speed <= (analog_scan[7] - 'd750) >> tacSW  ;  // for 
       end
 
       battery_value <= analog_scan[2] >> 6 ;         // for MCP3008 2ch(analog input)
@@ -231,7 +232,11 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780  to 0 - 16
+        if(HSCounter < 10)begin
+          accel <= 'd60;
+        end else begin
+          accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780  to 0 - 16
+        end
       end
 
       DIN <= 0;
@@ -267,7 +272,7 @@ module top (
 
 
 // generate pulse
-  parameter COUNT_MAX = 2700;  //100us for controllCLK
+  parameter COUNT_MAX = 1350;  //100us for controllCLK
 
   logic [11:0] counter = 'd0;
   logic [11:0] counterB = 'd0;
