@@ -5,34 +5,34 @@
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
-  <Physical Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
-  <Timing Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
+  <Design File>: C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
+  <Physical Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst
+  <Timing Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
   <Tool Version>: V1.9.9.03 (64-bit)
   <Part Number>: GW5A-LV25MG121NES
   <Device>: GW5A-25
   <Device Version>: A
-  <Created Time>:Tue Aug 27 20:31:01 2024
+  <Created Time>:Thu Sep  5 18:30:28 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.062s, Elapsed time = 0h 0m 0.061s
-    Placement Phase 1: CPU time = 0h 0m 0.179s, Elapsed time = 0h 0m 0.179s
-    Placement Phase 2: CPU time = 0h 0m 0.053s, Elapsed time = 0h 0m 0.053s
-    Placement Phase 3: CPU time = 0h 0m 0.421s, Elapsed time = 0h 0m 0.422s
-    Total Placement: CPU time = 0h 0m 0.715s, Elapsed time = 0h 0m 0.715s
+    Placement Phase 0: CPU time = 0h 0m 0.037s, Elapsed time = 0h 0m 0.037s
+    Placement Phase 1: CPU time = 0h 0m 0.133s, Elapsed time = 0h 0m 0.133s
+    Placement Phase 2: CPU time = 0h 0m 0.036s, Elapsed time = 0h 0m 0.036s
+    Placement Phase 3: CPU time = 0h 0m 0.301s, Elapsed time = 0h 0m 0.3s
+    Total Placement: CPU time = 0h 0m 0.507s, Elapsed time = 0h 0m 0.506s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Routing Phase 1: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
-    Routing Phase 2: CPU time = 0h 0m 0.054s, Elapsed time = 0h 0m 0.053s
+    Routing Phase 1: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    Routing Phase 2: CPU time = 0h 0m 0.022s, Elapsed time = 0h 0m 0.022s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
+    Total Routing: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
  Generate output files:
-    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 
- Total Time and Memory Usage: CPU time = 0h 0m 12s, Elapsed time = 0h 0m 12s, Peak memory usage = 483MB
+ Total Time and Memory Usage: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s, Peak memory usage = 545MB
 
 
 3. Resource Usage Summary
@@ -40,18 +40,18 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 583/23040  3%
-    --LUT,ALU,ROM16           | 583(473 LUT, 110 ALU, 0 ROM16)
+  Logic                       | 532/23040  3%
+    --LUT,ALU,ROM16           | 532(423 LUT, 109 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 273/23280  2%
+  Register                    | 245/23280  2%
     --Logic Register as Latch | 3/23040  <1%
-    --Logic Register as FF    | 261/23040  2%
+    --Logic Register as FF    | 233/23040  2%
     --I/O Register as Latch   | 3/240  2%
     --I/O Register as FF      | 6/240  3%
-  CLS                         | 350/11520  4%
+  CLS                         | 318/11520  3%
   I/O Port                    | 26
-  I/O Buf                     | 24
-    --Input Buf               | 10
+  I/O Buf                     | 22
+    --Input Buf               | 8
     --Output Buf              | 14
     --Inout Buf               | 0
   IOLOGIC                     | 0%
@@ -109,8 +109,8 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  n1951_15       | PRIMARY        |  TL BR
-  AD_CLK_d       | PRIMARY        |  TR TL BR BL
+  n1878_15       | PRIMARY        |  TR TL
+  AD_CLK_d       | PRIMARY        |  TR TL BL
   ===========================================
 
 
