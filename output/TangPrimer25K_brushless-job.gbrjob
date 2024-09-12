@@ -3,39 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Version": "7.0.5"
-=======
-      "Version": "8.0.0"
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Version": "8.0.0"
->>>>>>> parent of 736fd3d (Revert "0423")
+      "Version": "8.0.2"
     },
-    "CreationDate": "2024-04-23T01:00:26+09:00"
-  },
-  "GeneralSpecs": {
-    "ProjectId": {
-      "Name": "TangPrimer25K_brushless",
-      "GUID": "54616e67-5072-4696-9d65-7232354b5f62",
-      "Revision": "rev?"
-    },
-    "Size": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "X": 81.634,
-=======
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-      "Version": "8.0.0"
-    },
-    "CreationDate": "2024-04-23T01:00:26+09:00"
+    "CreationDate": "2024-09-12T20:37:13+09:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -45,19 +15,6 @@
     },
     "Size": {
       "X": 79.348,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
-      "X": 79.348,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "X": 79.348,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Y": 100.049
     },
     "LayerNumber": 2,
@@ -67,270 +24,57 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
-      "TrackToTrack": 0.2,
-      "MinLineWidth": 0.25,
-      "TrackToRegion": 0.2,
-      "RegionToRegion": 0.2
-=======
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
       "PadToPad": 0.125,
       "PadToTrack": 0.125,
       "TrackToTrack": 0.125,
       "MinLineWidth": 0.2,
       "TrackToRegion": 0.125,
       "RegionToRegion": 0.125
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of b09ad77 (0423)
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
->>>>>>> parent of 736fd3d (Revert "0423")
     }
   ],
   "FilesAttributes": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-F_Cu.gbr",
-=======
       "Path": "TangPrimer25K_brushless-F_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Cu.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-F_Cu.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-B_Cu.gbr",
-=======
       "Path": "TangPrimer25K_brushless-B_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Cu.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Cu.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-B_Cu.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-F_Paste.gbr",
-=======
       "Path": "TangPrimer25K_brushless-F_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Paste.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-F_Paste.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-B_Paste.gbr",
-=======
       "Path": "TangPrimer25K_brushless-B_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Paste.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Paste.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-B_Paste.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-F_Silkscreen.gbr",
-=======
       "Path": "TangPrimer25K_brushless-F_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Silkscreen.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-F_Silkscreen.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-B_Silkscreen.gbr",
-=======
       "Path": "TangPrimer25K_brushless-B_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Silkscreen.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Silkscreen.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-B_Silkscreen.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-F_Mask.gbr",
-=======
       "Path": "TangPrimer25K_brushless-F_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-F_Mask.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-F_Mask.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-B_Mask.gbr",
-=======
       "Path": "TangPrimer25K_brushless-B_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Mask.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-B_Mask.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-B_Mask.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Path": "tangnano9k_brushless_driver-Edge_Cuts.gbr",
-=======
       "Path": "TangPrimer25K_brushless-Edge_Cuts.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-Edge_Cuts.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-Edge_Cuts.gbr",
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Path": "TangPrimer25K_brushless-Edge_Cuts.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Path": "TangPrimer25K_brushless-Edge_Cuts.gbr",
->>>>>>> parent of 736fd3d (Revert "0423")
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
@@ -346,124 +90,29 @@
     },
     {
       "Type": "SolderMask",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Thickness": 0.01,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Name": "Top Solder Mask"
     },
     {
       "Type": "Copper",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Thickness": 0.035,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Name": "F.Cu"
     },
     {
       "Type": "Dielectric",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "Thickness": 1.51,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 1.51,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 1.51,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 1.51,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Thickness": 1.51,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Material": "FR4",
       "Name": "F.Cu/B.Cu",
       "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
     },
     {
       "Type": "Copper",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.035,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Thickness": 0.035,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Name": "B.Cu"
     },
     {
       "Type": "SolderMask",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of b09ad77 (0423)
-=======
-      "Thickness": 0.01,
->>>>>>> parent of 736fd3d (Revert "0423")
-=======
-      "Thickness": 0.01,
->>>>>>> parent of 736fd3d (Revert "0423")
       "Name": "Bottom Solder Mask"
     },
     {
