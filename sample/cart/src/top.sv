@@ -22,6 +22,8 @@ module top (
   output logic s,            //CAN Mode Select
   output logic txd,          //CAN データ送信線
   input wire rxd,            //CAN データ受信線
+  output logic led_g,
+  output logic led_y,
   output logic CAN_WS
 );
 
@@ -33,6 +35,8 @@ module top (
 
   // Pmod CAN制御用，Normal mode に固定
   assign s = 1'b0;
+
+  assign led_g = HS[0];
 
   // モジュール間の接続に使用する変数
   wire status_warning;
