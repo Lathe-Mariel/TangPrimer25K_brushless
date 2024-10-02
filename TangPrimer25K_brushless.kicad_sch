@@ -17215,7 +17215,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "VDD_3V3"
 			(at 166.37 168.91 0)
 			(effects
 				(font
