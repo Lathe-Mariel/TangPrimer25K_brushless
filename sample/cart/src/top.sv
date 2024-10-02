@@ -239,7 +239,7 @@ module top (
         if(HSCounter < 10)begin
           accel <= 'd60;
         end else begin
-          accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780  to 0 - 16
+          accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
         end
       end
 
