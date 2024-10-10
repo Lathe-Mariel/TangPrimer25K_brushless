@@ -235,7 +235,7 @@ module top (
         vehicle_speed <= (analog_scan[5] - 'd280)  >> 1;  //Throttle power        
       end
 
-      battery_value <= analog_scan[1] >> 2 ;         // for MCP3008 2ch(analog input)
+      battery_value <= analog_scan[1] >> 3 ;         // for MCP3008 2ch(analog input)
 
       if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
