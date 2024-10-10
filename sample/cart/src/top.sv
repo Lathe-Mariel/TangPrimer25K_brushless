@@ -229,10 +229,13 @@ module top (
         //vehicle_speed <= (analog_scan[7] - 'd750) >> tacSW  ;  // for 
       end
 */
+      if(analog_scan[5] < 'd280)begin
+        vehicle_speed <= 0;
+      end else begin
+        vehicle_speed <= (analog_scan[5] - 'd280)  >> 1;  //Throttle power        
+      end
 
-      vehicle_speed <= (analog_scan[5] - 'd260)  >> 1;  //Throttle power
-
-      battery_value <= analog_scan[1] << 1 ;         // for MCP3008 2ch(analog input)
+      battery_value <= analog_scan[1] >> 2 ;         // for MCP3008 2ch(analog input)
 
       if(analog_scan[5] < 'd280)begin
         accel <= 'd0;
