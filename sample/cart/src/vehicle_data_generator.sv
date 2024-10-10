@@ -26,7 +26,7 @@ module vehicle_data_generator #(
 );
 
   // 入出力との接続
-  assign stm_send_data_out_tdata = (state == STATE_SEND_ENGINE_REV)? {8'd0, 8'd0, engine_rev, 2'd0, 32'd0}:
+  assign stm_send_data_out_tdata = (state == STATE_SEND_ENGINE_REV)? {8'd0, 8'd0, engine_rev, 2'd0, 24'd0, 8'b11111111}:
                                    (state == STATE_SEND_CAR_SPEED)?  {vehicle_speed, 7'd0, 48'd0}:
                                                                      'd0;
   assign stm_send_data_out_tid = (state == STATE_SEND_ENGINE_REV)? ID_ENGINE_REV:
