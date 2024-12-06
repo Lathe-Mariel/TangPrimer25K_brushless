@@ -5,6 +5,7 @@ module vehicle_data_generator #(
   parameter SLEEP_CYCLE   = 50_000_000,       // データ送信後、スリープするcycle 数
   parameter ID_ENGINE_REV = 11'h3D9,          // エンジン回転数送信時のID
   parameter ID_CAR_SPEED  = 11'h3E9           // 車速送信時のID
+//parameter ID_FUEL       = 11'h2F            // 燃料残量
 ) (
   input  wire clk,                            // クロック入力
   input  wire [13:0] engine_rev,              // エンジン回転数入力
