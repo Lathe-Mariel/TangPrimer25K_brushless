@@ -30,7 +30,7 @@ module top (
   localparam CLK_FREQ_HZ    = 50_000_000;         // 入力クロック周波数
   localparam CAN_BITRATE_HZ = 500_000;            // CAN のビットレート
   localparam SLEEP_CYCLE    = CLK_FREQ_HZ / 100;  // データ送信後、スリープするcycle 数
-  localparam ID_ENGINE_REV  = 11'h3D9;            // 電流の送信ID
+  localparam ID_ENGINE_REV  = 11'h3D9;            // の送信ID
   localparam ID_CAR_SPEED   = 11'h3E9;            // モータ回転数の送信ID
 
   // Pmod CAN制御用，Normal mode に固定
@@ -151,20 +151,28 @@ module top (
     if(processCounter % 4096 == 0)begin
       if(HSCounter > 84)begin
         dutyPara <= 'd7;
+        advance_angle <= 'd3;
       end else if(HSCounter > 68)begin
         dutyPara <= 'd6;
+        advance_angle <= 'd3;
       end else if(HSCounter > 54)begin
         dutyPara <= 'd5;
+        advance_angle <= 'd3;
       end else if(HSCounter > 40)begin
         dutyPara <= 'd4;
+        advance_angle <= 'd3;
       end else if(HSCounter > 28)begin
         dutyPara <= 'd3;
+        advance_angle <= 'd0;
       end else if(HSCounter > 18)begin
         dutyPara <= 'd2;
+        advance_angle <= 'd0;
       end else if(HSCounter > 10)begin
         dutyPara <= 'd1;
+        advance_angle <= 'd0;
       end else begin
         dutyPara <= 'd0;
+        advance_angle <= 'd0;
       end
 
       engine_rev <= HSCounter * 10'd3;
