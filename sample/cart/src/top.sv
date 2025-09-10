@@ -66,6 +66,8 @@ module top (
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
+  logic[4:0]  advance_angle;          // to advance angle of drive mode of BLDC
+  logic[2:0]  drive_mode;                   // BLDC drive mode
 
   logic[1:0]  tacSWpushed;            // flag for tac_SW1-4
 
@@ -123,7 +125,7 @@ module top (
 
 // rotation by hall sensor
       if(direction)begin     //CW
-        case(HS)
+        case(drive_mode)
           3'd1: rotateState = 3'd4;
           3'd2: rotateState = 3'd0;
           3'd3: rotateState = 3'd5;
@@ -132,7 +134,7 @@ module top (
           3'd6: rotateState = 3'd1;
         endcase
       end else begin         //CCW
-        case(HS)
+        case(drive_mode)
           3'd1: rotateState = 3'd1;
           3'd2: rotateState = 3'd3;
           3'd3: rotateState = 3'd2;
@@ -174,6 +176,9 @@ module top (
       end else begin
         isRotate <= 'b0;
       end
+
+    end else if(processCounter % 4096 == (4096 - advance_angle * 10))begin  //advance angle controll
+      drive_mode <= HS;
 
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
@@ -242,7 +247,7 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        if(HSCounter < 10)begin
+        if(HSCounter < 15)begin
           accel <= 'd60;
         end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
