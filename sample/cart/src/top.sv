@@ -64,6 +64,8 @@ module top (
   logic _LT;
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
+  logic[9:0]  OldHSCounter;
+  logic[7:0]  ele120_time;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
   logic[4:0]  advance_angle;          // to advance angle of drive mode of BLDC
@@ -185,16 +187,21 @@ module top (
         isRotate <= 'b0;
       end
 
-    end else if(processCounter % 4096 == (4096 - advance_angle * 10))begin  //advance angle controll
-      drive_mode <= HS;
+//      drive_mode <= HS;
 
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
+        ele120_time <= OldHSCounter > HSCounter? OldHSCounter - HSCounter: ele120_time;
+        OldHSCounter <= HSCounter;
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
+        ele120_time <= ele120_time + 10'b1;
+        if(ele120_time >= 84)begin
+          drive_mode <= HS;
+        end
       end
     end
 
