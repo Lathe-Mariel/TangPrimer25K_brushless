@@ -68,7 +68,7 @@ module top (
   logic[7:0]  ele120_time;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
-  logic[4:0]  advance_angle;          // to advance angle of drive mode of BLDC
+
   logic[2:0]  drive_mode;                   // BLDC drive mode
 
   logic[1:0]  tacSWpushed;            // flag for tac_SW1-4
@@ -153,28 +153,20 @@ module top (
     if(processCounter % 4096 == 0)begin
       if(HSCounter > 84)begin
         dutyPara <= 'd7;
-        advance_angle <= 'd3;
       end else if(HSCounter > 68)begin
         dutyPara <= 'd6;
-        advance_angle <= 'd3;
       end else if(HSCounter > 54)begin
         dutyPara <= 'd5;
-        advance_angle <= 'd3;
       end else if(HSCounter > 40)begin
         dutyPara <= 'd4;
-        advance_angle <= 'd3;
       end else if(HSCounter > 28)begin
         dutyPara <= 'd3;
-        advance_angle <= 'd0;
       end else if(HSCounter > 18)begin
         dutyPara <= 'd2;
-        advance_angle <= 'd0;
       end else if(HSCounter > 10)begin
         dutyPara <= 'd1;
-        advance_angle <= 'd0;
       end else begin
         dutyPara <= 'd0;
-        advance_angle <= 'd0;
       end
 
       engine_rev <= HSCounter * 10'd3;
@@ -193,15 +185,16 @@ module top (
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
-        ele120_time <= OldHSCounter > HSCounter? OldHSCounter - HSCounter: ele120_time;
+        drive_mode <= HS;
+        ele120_time <= HSCounter > OldHSCounter? (HSCounter - OldHSCounter)*2: ele120_time;
         OldHSCounter <= HSCounter;
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
-        ele120_time <= ele120_time + 10'b1;
-        if(ele120_time >= 84)begin
-          drive_mode <= HS;
-        end
+//        ele120_time <= ele120_time + 10'd3;
+//        if(ele120_time >= 170)begin
+//          drive_mode <= HS;
+//        end
       end
     end
 
@@ -262,8 +255,8 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        if(HSCounter < 15)begin
-          accel <= 'd60;
+        if(HSCounter < 18)begin  //soft start
+          accel <= (((analog_scan[5] - 'd280) * 2) < 60) ?(analog_scan[5] - 'd280) * 2 : 'd60;
         end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
         end
