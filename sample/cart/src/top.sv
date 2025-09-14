@@ -181,8 +181,8 @@ module top (
         forcedRotationCounter <= 0;
       end
 
-//      drive_mode <= HS;
-
+// counter changing HS value
+// advancing electric angle 
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
@@ -195,7 +195,7 @@ module top (
         oldHS <= HS;
         ele120_time <= ele120_time - 10'd1;
         if(ele120_time < 40)begin
-          drive_mode <= HS;
+          drive_mode <= HS; //change motor drive mode
         end
       end
     end
@@ -259,6 +259,8 @@ module top (
       end else begin
         if(HSCounter < 18)begin  //soft start
           accel <= (((analog_scan[5] - 'd280) * 2) < 60) ?(analog_scan[5] - 'd280) * 2 : 'd60;
+        end else if(HSCounter < 28)begin //soft start2
+          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd100;
         end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
         end
