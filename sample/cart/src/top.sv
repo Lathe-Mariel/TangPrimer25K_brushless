@@ -64,7 +64,7 @@ module top (
   logic _LT;
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
-  logic[9:0]  OldHSCounter;
+  logic[15:0]  OldprocessCounter;
   logic[7:0]  ele120_time;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
@@ -80,6 +80,7 @@ module top (
 
   logic[11:0] dutyList[8]={'d1400, 'd1000, 'd800, 'd700, 'd620, 'd560, 'd520, 'd500};  //ドレミファインバータ風
   logic[2:0]  dutyPara;  //ドレミファインバータ制御用インデックス
+
 
 ///////// エンジン回転数と車速を送信するモジュール /////////
   vehicle_data_generator #(
@@ -126,7 +127,7 @@ module top (
     end else begin
 
 // rotation by hall sensor
-      if(direction)begin     //CW
+      if(toggleSW[0])begin     //CW  //direction
         case(drive_mode)
           3'd1: rotateState = 3'd4;
           3'd2: rotateState = 3'd0;
@@ -177,6 +178,7 @@ module top (
         isRotate <= 'b1;
       end else begin
         isRotate <= 'b0;
+        forcedRotationCounter <= 0;
       end
 
 //      drive_mode <= HS;
@@ -186,15 +188,15 @@ module top (
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
         drive_mode <= HS;
-        ele120_time <= HSCounter > OldHSCounter? (HSCounter - OldHSCounter)*2: ele120_time;
-        OldHSCounter <= HSCounter;
+        ele120_time <= processCounter > OldprocessCounter? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+        OldprocessCounter <= processCounter;
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
-//        ele120_time <= ele120_time + 10'd3;
-//        if(ele120_time >= 170)begin
-//          drive_mode <= HS;
-//        end
+        ele120_time <= ele120_time - 10'd1;
+        if(ele120_time < 40)begin
+          drive_mode <= HS;
+        end
       end
     end
 
