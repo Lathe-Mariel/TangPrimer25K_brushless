@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "E:/git/TangPrimer25K_brushless/sample/cart/src/top.sv",
-    "InstLine" : 90,
+    "InstLine" : 91,
     "InstName" : "vehicle_data_generator_i",
     "ModuleFile" : "E:/git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
     "ModuleLine" : 4,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "E:/git/TangPrimer25K_brushless/sample/cart/src/top.sv",
-    "InstLine" : 106,
+    "InstLine" : 107,
     "InstName" : "can_controller_i",
     "ModuleFile" : "E:/git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
     "ModuleLine" : 4,

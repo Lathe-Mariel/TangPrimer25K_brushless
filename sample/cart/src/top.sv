@@ -37,6 +37,7 @@ module top (
   assign s = 1'b0;
 
   assign led_g = HS[0];
+  assign led_y = ele120_time[7];
 
   // モジュール間の接続に使用する変数
   wire status_warning;
@@ -65,7 +66,7 @@ module top (
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
   logic[15:0]  OldprocessCounter;
-  logic[7:0]  ele120_time;
+  logic[15:0]  ele120_time;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
 
@@ -187,14 +188,14 @@ module top (
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
-        drive_mode <= HS;
-        ele120_time <= processCounter > OldprocessCounter? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+//        drive_mode <= HS;
+        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
         OldprocessCounter <= processCounter;
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
-        ele120_time <= ele120_time - 10'd1;
-        if(ele120_time < 40)begin
+        ele120_time <= ele120_time - 16'd10;
+        if(ele120_time < 16'd20)begin
           drive_mode <= HS; //change motor drive mode
         end
       end

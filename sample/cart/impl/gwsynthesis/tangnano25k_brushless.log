@@ -6,7 +6,7 @@ Analyzing Verilog file 'E:\git\TangPrimer25K_brushless\sample\cart\src\can_synch
 Analyzing Verilog file 'E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv'
 Analyzing Verilog file 'E:\git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv'
 Compiling module 'top'("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":3)
-Extracting RAM for identifier 'dutyList'("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":81)
+Extracting RAM for identifier 'dutyList'("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":82)
 Compiling module 'vehicle_data_generator(SLEEP_CYCLE=500000,ID_ENGINE_REV=11'b01111011001,ID_CAR_SPEED=11'b01111101001)'("E:\git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv":4)
 WARN  (EX3791) : Expression size 20 truncated to fit in target size 19("E:\git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv":76)
 Compiling module 'can_controller'("E:\git\TangPrimer25K_brushless\sample\cart\src\can_controller.sv":4)
@@ -27,21 +27,19 @@ WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("E:\git\Ta
 WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("E:\git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv":135)
 WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("E:\git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv":140)
 WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("E:\git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv":152)
-WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":126)
-WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":151)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":188)
-WARN  (EX3791) : Expression size 16 truncated to fit in target size 8("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":191)
-WARN  (EX3791) : Expression size 10 truncated to fit in target size 8("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":196)
-WARN  (EX3791) : Expression size 31 truncated to fit in target size 9("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":250)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":261)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":263)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":265)
-WARN  (EX3779) : 'toggleSW' should be on the sensitivity list. Signal missing is added and assuming complete sensitivity list specified. RTL design and post-synthesis netlist simulations may differ as a result("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":277)
-WARN  (EX2420) : Latch inferred for net 'HIN_R'; We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":312)
-WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":314)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":325)
-WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":328)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":127)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":152)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":189)
+WARN  (EX3791) : Expression size 31 truncated to fit in target size 9("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":251)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":262)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":264)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":266)
+WARN  (EX3779) : 'toggleSW' should be on the sensitivity list. Signal missing is added and assuming complete sensitivity list specified. RTL design and post-synthesis netlist simulations may differ as a result("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":278)
+WARN  (EX2420) : Latch inferred for net 'HIN_R'; We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":313)
+WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":315)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":326)
+WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":329)
 NOTE  (EX0101) : Current top module is "top"
 WARN  (EX0211) : The output port "CAN_LED0" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":20)
 WARN  (EX0211) : The output port "CAN_LED1" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":21)
@@ -63,12 +61,12 @@ Running inference ...
 Running technical mapping ...
 [60%] Tech-Mapping Phase 0 completed
 [65%] Tech-Mapping Phase 1 completed
-WARN  (DI0003) : Latch inferred for net 'HIN_R';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (DI0003) : Latch inferred for net 'HIN_S';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (DI0003) : Latch inferred for net '_LS';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (DI0003) : Latch inferred for net 'HIN_T';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (DI0003) : Latch inferred for net '_LT';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
-WARN  (DI0003) : Latch inferred for net '_LR';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":289)
+WARN  (DI0003) : Latch inferred for net 'HIN_R';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (DI0003) : Latch inferred for net 'HIN_S';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (DI0003) : Latch inferred for net '_LS';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (DI0003) : Latch inferred for net 'HIN_T';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (DI0003) : Latch inferred for net '_LT';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
+WARN  (DI0003) : Latch inferred for net '_LR';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":290)
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
