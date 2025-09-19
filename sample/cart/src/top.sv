@@ -190,12 +190,13 @@ module top (
         oldHS <= HS;
 //        drive_mode <= HS;
         ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+//        ele120_time <= (processCounter - OldprocessCounter);
         OldprocessCounter <= processCounter;
       end else begin
 //        HSCounter <= HSCounter;
 //        oldHS <= HS;
-        ele120_time <= ele120_time - 16'd10;
-        if(ele120_time < 16'd20)begin
+        ele120_time <= ele120_time - 16'd5;
+        if(ele120_time < 16'd200)begin
           drive_mode <= HS; //change motor drive mode
         end
       end

@@ -2,23 +2,23 @@
  "Device" : "GW5A-25A",
  "Files" : [
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
+   "Path" : "E:/git/TangPrimer25K_brushless/sample/cart/src/can_controller.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_sender.sv",
+   "Path" : "E:/git/TangPrimer25K_brushless/sample/cart/src/can_sender.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/can_synchronizer.sv",
+   "Path" : "E:/git/TangPrimer25K_brushless/sample/cart/src/can_synchronizer.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/top.sv",
+   "Path" : "E:/git/TangPrimer25K_brushless/sample/cart/src/top.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
+   "Path" : "E:/git/TangPrimer25K_brushless/sample/cart/src/vehicle_data_generator.sv",
    "Type" : "verilog"
   }
  ],
@@ -26,7 +26,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "C:/Git/TangPrimer25K_brushless/sample/cart/impl/temp/rtl_parser.result",
+ "ResultFile" : "E:/git/TangPrimer25K_brushless/sample/cart/impl/temp/rtl_parser.result",
  "Top" : "top",
  "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"
