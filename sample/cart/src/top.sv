@@ -259,13 +259,13 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        if(HSCounter < 6)begin  //soft start
-          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd100;
-        end else if(HSCounter < 18)begin //soft start2
-          accel <= (((analog_scan[5] - 'd280) * 2) < 200) ?(analog_scan[5] - 'd280) * 2 : 'd200;
-        end else begin
+//        if(HSCounter < 5)begin  //soft start
+//          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd400;
+//        end else if(HSCounter < 10)begin //soft start2
+//          accel <= (((analog_scan[5] - 'd280) * 2) < 300) ?(analog_scan[5] - 'd280) * 2 : 'd500;
+//        end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
-        end
+//        end
       end
 
       DIN <= 0;
