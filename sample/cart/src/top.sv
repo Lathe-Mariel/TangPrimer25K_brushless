@@ -188,17 +188,17 @@ module top (
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
-//        drive_mode <= HS;
-        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+        drive_mode <= HS;
+ //       ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
 //        ele120_time <= (processCounter - OldprocessCounter);
-        OldprocessCounter <= processCounter;
+//        OldprocessCounter <= processCounter;
       end else begin
-//        HSCounter <= HSCounter;
-//        oldHS <= HS;
-        ele120_time <= ele120_time - 16'd5;
-        if(ele120_time < 16'd200)begin
-          drive_mode <= HS; //change motor drive mode
-        end
+        HSCounter <= HSCounter;
+        oldHS <= HS;
+//        ele120_time <= ele120_time - 16'd5;
+//        if(ele120_time < 16'd200)begin
+//          drive_mode <= HS; //change motor drive mode
+//        end
       end
     end
 
@@ -259,10 +259,10 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        if(HSCounter < 18)begin  //soft start
+        if(HSCounter < 12)begin  //soft start
           accel <= (((analog_scan[5] - 'd280) * 2) < 60) ?(analog_scan[5] - 'd280) * 2 : 'd60;
-        end else if(HSCounter < 28)begin //soft start2
-          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd100;
+//        end else if(HSCounter < 28)begin //soft start2
+//          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd100;
         end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
         end
