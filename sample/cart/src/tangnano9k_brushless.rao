@@ -2,9 +2,8 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Lite</Mode>
-    <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="4096" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+    <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="16384" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
         <SignalList>
-            <Signal capture_enable="true">duty</Signal>
             <Bus capture_enable="true" name="rotateState[2:0]">
                 <Signal>rotateState[2]</Signal>
                 <Signal>rotateState[1]</Signal>
@@ -13,19 +12,47 @@
             <Signal capture_enable="true">HIN_R</Signal>
             <Signal capture_enable="true">HIN_S</Signal>
             <Signal capture_enable="true">HIN_T</Signal>
-            <Signal capture_enable="true">CS</Signal>
-            <Signal capture_enable="true">DIN</Signal>
-            <Signal capture_enable="true">DOUT</Signal>
-            <Bus capture_enable="true" name="processCounter[5:0]">
-                <Signal>processCounter[5]</Signal>
-                <Signal>processCounter[4]</Signal>
-                <Signal>processCounter[3]</Signal>
-                <Signal>processCounter[2]</Signal>
-                <Signal>processCounter[1]</Signal>
-                <Signal>processCounter[0]</Signal>
+            <Bus capture_enable="true" name="ele120_time[15:0]">
+                <Signal>ele120_time[15]</Signal>
+                <Signal>ele120_time[14]</Signal>
+                <Signal>ele120_time[13]</Signal>
+                <Signal>ele120_time[12]</Signal>
+                <Signal>ele120_time[11]</Signal>
+                <Signal>ele120_time[10]</Signal>
+                <Signal>ele120_time[9]</Signal>
+                <Signal>ele120_time[8]</Signal>
+                <Signal>ele120_time[7]</Signal>
+                <Signal>ele120_time[6]</Signal>
+                <Signal>ele120_time[5]</Signal>
+                <Signal>ele120_time[4]</Signal>
+                <Signal>ele120_time[3]</Signal>
+                <Signal>ele120_time[2]</Signal>
+                <Signal>ele120_time[1]</Signal>
+                <Signal>ele120_time[0]</Signal>
             </Bus>
-            <Signal capture_enable="true">isRotate</Signal>
+            <Bus capture_enable="true" name="HSCounter[9:0]">
+                <Signal>HSCounter[9]</Signal>
+                <Signal>HSCounter[8]</Signal>
+                <Signal>HSCounter[7]</Signal>
+                <Signal>HSCounter[6]</Signal>
+                <Signal>HSCounter[5]</Signal>
+                <Signal>HSCounter[4]</Signal>
+                <Signal>HSCounter[3]</Signal>
+                <Signal>HSCounter[2]</Signal>
+                <Signal>HSCounter[1]</Signal>
+                <Signal>HSCounter[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="HS[2:0]">
+                <Signal>HS[2]</Signal>
+                <Signal>HS[1]</Signal>
+                <Signal>HS[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="drive_mode[2:0]">
+                <Signal>drive_mode[2]</Signal>
+                <Signal>drive_mode[1]</Signal>
+                <Signal>drive_mode[0]</Signal>
+            </Bus>
         </SignalList>
     </AoCore_Lite>
-    <GAO_ID>1000110000010100</GAO_ID>
+    <GAO_ID>1110011111010110</GAO_ID>
 </GAO_CONFIG>

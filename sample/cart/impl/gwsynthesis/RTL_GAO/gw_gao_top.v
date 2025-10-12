@@ -1,21 +1,42 @@
 module gw_gao(
-    duty,
     \rotateState[2] ,
     \rotateState[1] ,
     \rotateState[0] ,
     HIN_R,
     HIN_S,
     HIN_T,
-    CS,
-    DIN,
-    DOUT,
-    \processCounter[5] ,
-    \processCounter[4] ,
-    \processCounter[3] ,
-    \processCounter[2] ,
-    \processCounter[1] ,
-    \processCounter[0] ,
-    isRotate,
+    \ele120_time[15] ,
+    \ele120_time[14] ,
+    \ele120_time[13] ,
+    \ele120_time[12] ,
+    \ele120_time[11] ,
+    \ele120_time[10] ,
+    \ele120_time[9] ,
+    \ele120_time[8] ,
+    \ele120_time[7] ,
+    \ele120_time[6] ,
+    \ele120_time[5] ,
+    \ele120_time[4] ,
+    \ele120_time[3] ,
+    \ele120_time[2] ,
+    \ele120_time[1] ,
+    \ele120_time[0] ,
+    \HSCounter[9] ,
+    \HSCounter[8] ,
+    \HSCounter[7] ,
+    \HSCounter[6] ,
+    \HSCounter[5] ,
+    \HSCounter[4] ,
+    \HSCounter[3] ,
+    \HSCounter[2] ,
+    \HSCounter[1] ,
+    \HSCounter[0] ,
+    \HS[2] ,
+    \HS[1] ,
+    \HS[0] ,
+    \drive_mode[2] ,
+    \drive_mode[1] ,
+    \drive_mode[0] ,
     controlCLK,
     tms_pad_i,
     tck_pad_i,
@@ -23,46 +44,88 @@ module gw_gao(
     tdo_pad_o
 );
 
-input duty;
 input \rotateState[2] ;
 input \rotateState[1] ;
 input \rotateState[0] ;
 input HIN_R;
 input HIN_S;
 input HIN_T;
-input CS;
-input DIN;
-input DOUT;
-input \processCounter[5] ;
-input \processCounter[4] ;
-input \processCounter[3] ;
-input \processCounter[2] ;
-input \processCounter[1] ;
-input \processCounter[0] ;
-input isRotate;
+input \ele120_time[15] ;
+input \ele120_time[14] ;
+input \ele120_time[13] ;
+input \ele120_time[12] ;
+input \ele120_time[11] ;
+input \ele120_time[10] ;
+input \ele120_time[9] ;
+input \ele120_time[8] ;
+input \ele120_time[7] ;
+input \ele120_time[6] ;
+input \ele120_time[5] ;
+input \ele120_time[4] ;
+input \ele120_time[3] ;
+input \ele120_time[2] ;
+input \ele120_time[1] ;
+input \ele120_time[0] ;
+input \HSCounter[9] ;
+input \HSCounter[8] ;
+input \HSCounter[7] ;
+input \HSCounter[6] ;
+input \HSCounter[5] ;
+input \HSCounter[4] ;
+input \HSCounter[3] ;
+input \HSCounter[2] ;
+input \HSCounter[1] ;
+input \HSCounter[0] ;
+input \HS[2] ;
+input \HS[1] ;
+input \HS[0] ;
+input \drive_mode[2] ;
+input \drive_mode[1] ;
+input \drive_mode[0] ;
 input controlCLK;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire duty;
 wire \rotateState[2] ;
 wire \rotateState[1] ;
 wire \rotateState[0] ;
 wire HIN_R;
 wire HIN_S;
 wire HIN_T;
-wire CS;
-wire DIN;
-wire DOUT;
-wire \processCounter[5] ;
-wire \processCounter[4] ;
-wire \processCounter[3] ;
-wire \processCounter[2] ;
-wire \processCounter[1] ;
-wire \processCounter[0] ;
-wire isRotate;
+wire \ele120_time[15] ;
+wire \ele120_time[14] ;
+wire \ele120_time[13] ;
+wire \ele120_time[12] ;
+wire \ele120_time[11] ;
+wire \ele120_time[10] ;
+wire \ele120_time[9] ;
+wire \ele120_time[8] ;
+wire \ele120_time[7] ;
+wire \ele120_time[6] ;
+wire \ele120_time[5] ;
+wire \ele120_time[4] ;
+wire \ele120_time[3] ;
+wire \ele120_time[2] ;
+wire \ele120_time[1] ;
+wire \ele120_time[0] ;
+wire \HSCounter[9] ;
+wire \HSCounter[8] ;
+wire \HSCounter[7] ;
+wire \HSCounter[6] ;
+wire \HSCounter[5] ;
+wire \HSCounter[4] ;
+wire \HSCounter[3] ;
+wire \HSCounter[2] ;
+wire \HSCounter[1] ;
+wire \HSCounter[0] ;
+wire \HS[2] ;
+wire \HS[1] ;
+wire \HS[0] ;
+wire \drive_mode[2] ;
+wire \drive_mode[1] ;
+wire \drive_mode[0] ;
 wire controlCLK;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -137,7 +200,7 @@ gw_con_top  u_icon_top(
 
 ao_top u_ao_top(
     .control(control0[9:0]),
-    .data_i({duty,\rotateState[2] ,\rotateState[1] ,\rotateState[0] ,HIN_R,HIN_S,HIN_T,CS,DIN,DOUT,\processCounter[5] ,\processCounter[4] ,\processCounter[3] ,\processCounter[2] ,\processCounter[1] ,\processCounter[0] ,isRotate}),
+    .data_i({\rotateState[2] ,\rotateState[1] ,\rotateState[0] ,HIN_R,HIN_S,HIN_T,\ele120_time[15] ,\ele120_time[14] ,\ele120_time[13] ,\ele120_time[12] ,\ele120_time[11] ,\ele120_time[10] ,\ele120_time[9] ,\ele120_time[8] ,\ele120_time[7] ,\ele120_time[6] ,\ele120_time[5] ,\ele120_time[4] ,\ele120_time[3] ,\ele120_time[2] ,\ele120_time[1] ,\ele120_time[0] ,\HSCounter[9] ,\HSCounter[8] ,\HSCounter[7] ,\HSCounter[6] ,\HSCounter[5] ,\HSCounter[4] ,\HSCounter[3] ,\HSCounter[2] ,\HSCounter[1] ,\HSCounter[0] ,\HS[2] ,\HS[1] ,\HS[0] ,\drive_mode[2] ,\drive_mode[1] ,\drive_mode[0] }),
     .clk_i(controlCLK)
 );
 

@@ -30,13 +30,14 @@ module top (
   localparam CLK_FREQ_HZ    = 50_000_000;         // 入力クロック周波数
   localparam CAN_BITRATE_HZ = 500_000;            // CAN のビットレート
   localparam SLEEP_CYCLE    = CLK_FREQ_HZ / 100;  // データ送信後、スリープするcycle 数
-  localparam ID_ENGINE_REV  = 11'h3D9;            // 電流の送信ID
+  localparam ID_ENGINE_REV  = 11'h3D9;            // の送信ID
   localparam ID_CAR_SPEED   = 11'h3E9;            // モータ回転数の送信ID
 
   // Pmod CAN制御用，Normal mode に固定
   assign s = 1'b0;
 
   assign led_g = HS[0];
+  assign led_y = ele120_time[7];
 
   // モジュール間の接続に使用する変数
   wire status_warning;
@@ -64,8 +65,12 @@ module top (
   logic _LT;
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
+  logic[15:0]  OldprocessCounter;
+  logic[15:0]  ele120_time;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
+
+  logic[2:0]  drive_mode;                   // BLDC drive mode
 
   logic[1:0]  tacSWpushed;            // flag for tac_SW1-4
 
@@ -76,6 +81,7 @@ module top (
 
   logic[11:0] dutyList[8]={'d1400, 'd1000, 'd800, 'd700, 'd620, 'd560, 'd520, 'd500};  //ドレミファインバータ風
   logic[2:0]  dutyPara;  //ドレミファインバータ制御用インデックス
+
 
 ///////// エンジン回転数と車速を送信するモジュール /////////
   vehicle_data_generator #(
@@ -122,8 +128,8 @@ module top (
     end else begin
 
 // rotation by hall sensor
-      if(direction)begin     //CW
-        case(HS)
+      if(toggleSW[0])begin     //CW  //direction
+        case(drive_mode)
           3'd1: rotateState = 3'd4;
           3'd2: rotateState = 3'd0;
           3'd3: rotateState = 3'd5;
@@ -132,7 +138,7 @@ module top (
           3'd6: rotateState = 3'd1;
         endcase
       end else begin         //CCW
-        case(HS)
+        case(drive_mode)
           3'd1: rotateState = 3'd1;
           3'd2: rotateState = 3'd3;
           3'd3: rotateState = 3'd2;
@@ -173,15 +179,26 @@ module top (
         isRotate <= 'b1;
       end else begin
         isRotate <= 'b0;
+        forcedRotationCounter <= 0;
       end
 
+// counter changing HS value
+// advancing electric angle 
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
+//        drive_mode <= HS;
+        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+//        ele120_time <= (processCounter - OldprocessCounter);
+        OldprocessCounter <= processCounter;
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
+        ele120_time <= ele120_time - 16'd1;
+        if(ele120_time < 16'd250)begin
+          drive_mode <= HS; //change motor drive mode
+        end
       end
     end
 
@@ -242,11 +259,13 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin
-        if(HSCounter < 10)begin
-          accel <= 'd60;
-        end else begin
+//        if(HSCounter < 5)begin  //soft start
+//          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd400;
+//        end else if(HSCounter < 10)begin //soft start2
+//          accel <= (((analog_scan[5] - 'd280) * 2) < 300) ?(analog_scan[5] - 'd280) * 2 : 'd500;
+//        end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
-        end
+//        end
       end
 
       DIN <= 0;
