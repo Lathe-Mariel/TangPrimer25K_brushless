@@ -42,7 +42,17 @@
                 <Signal>HSCounter[1]</Signal>
                 <Signal>HSCounter[0]</Signal>
             </Bus>
+            <Bus capture_enable="true" name="HS[2:0]">
+                <Signal>HS[2]</Signal>
+                <Signal>HS[1]</Signal>
+                <Signal>HS[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="drive_mode[2:0]">
+                <Signal>drive_mode[2]</Signal>
+                <Signal>drive_mode[1]</Signal>
+                <Signal>drive_mode[0]</Signal>
+            </Bus>
         </SignalList>
     </AoCore_Lite>
-    <GAO_ID>0111010100110011</GAO_ID>
+    <GAO_ID>1110011111010110</GAO_ID>
 </GAO_CONFIG>

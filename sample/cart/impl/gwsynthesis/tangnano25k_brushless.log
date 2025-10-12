@@ -38,7 +38,6 @@ WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\T
 WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":316)
 WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":327)
 WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":330)
-WARN  (EX1998) : Net 'ele120_time[7]' does not have a driver("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":69)
 NOTE  (EX0101) : Current top module is "top"
 WARN  (EX0211) : The output port "CAN_LED0" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":20)
 WARN  (EX0211) : The output port "CAN_LED1" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv":21)

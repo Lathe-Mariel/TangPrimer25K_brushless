@@ -8,8 +8,8 @@ Running placement......
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
 WARN  (TA1132) :  'AD_CLK_d' was determined to be a clock but was not created.
-WARN  (TA1132) :  'n1940_15' was determined to be a clock but was not created.
-WARN  (TA1132) :  'n1943_13' was determined to be a clock but was not created.
+WARN  (TA1132) :  'n2140_15' was determined to be a clock but was not created.
+WARN  (TA1132) :  'n2143_13' was determined to be a clock but was not created.
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -28,5 +28,5 @@ Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_b
 Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.html" completed
 Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.txt" completed
 Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.tr.html" completed
-Thu Sep 25 19:43:36 2025
+Sun Oct 12 18:57:15 2025
 
