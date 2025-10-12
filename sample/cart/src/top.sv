@@ -83,6 +83,7 @@ module top (
   logic[2:0]  dutyPara;  //ドレミファインバータ制御用インデックス
 
 
+
 ///////// エンジン回転数と車速を送信するモジュール /////////
   vehicle_data_generator #(
     .SLEEP_CYCLE(SLEEP_CYCLE),
@@ -171,6 +172,7 @@ module top (
         dutyPara <= 'd0;
       end
 
+      oldHSCounter <= HSCounter;
       engine_rev <= HSCounter * 10'd3;
       HSCounter <= 0;
 
@@ -195,9 +197,11 @@ module top (
       end else begin
         HSCounter <= HSCounter;
         oldHS <= HS;
-        ele120_time <= ele120_time - 16'd1;
+        
         if(ele120_time < 16'd250)begin
           drive_mode <= HS; //change motor drive mode
+        end else begin
+          ele120_time <= ele120_time - 16'd1;
         end
       end
     end
