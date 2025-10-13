@@ -37,7 +37,7 @@ module top (
   assign s = 1'b0;
 
   assign led_g = HS[0];
-  assign led_y = ele120_time[7];
+//  assign led_y = ele120_time[7];
 
   // モジュール間の接続に使用する変数
   wire status_warning;
@@ -66,9 +66,11 @@ module top (
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
   logic[15:0]  OldprocessCounter;
-  logic[15:0]  ele120_time;
+  //logic[15:0]  ele120_time;
+  logic[15:0] counter_per_cycle;      // counter per electrical angle 360degree 
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
+  logic[9:0]  delayAngleCounter;
 
   logic[2:0]  drive_mode;                   // BLDC drive mode
 
@@ -172,12 +174,20 @@ module top (
         dutyPara <= 'd0;
       end
 
-      oldHSCounter <= HSCounter;
+//      oldHSCounter <= HSCounter;
       engine_rev <= HSCounter * 10'd3;
       HSCounter <= 0;
 
-// measure speed
+/*
       if(HSCounter > 0)begin
+        isRotate <= 'b1;
+      end else begin
+        isRotate <= 'b0;
+        forcedRotationCounter <= 0;
+      end
+*/
+
+      if(counter_per_cycle > 0)begin
         isRotate <= 'b1;
       end else begin
         isRotate <= 'b0;
@@ -188,20 +198,27 @@ module top (
 // advancing electric angle 
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
+        if(HS == 3'b001) begin
+          counter_per_cycle <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
+          OldprocessCounter <= processCounter;
+        end
+        delayAngleCounter <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
 //        drive_mode <= HS;
-        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
+//        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
 //        ele120_time <= (processCounter - OldprocessCounter);
-        OldprocessCounter <= processCounter;
+//        OldprocessCounter <= processCounter;
       end else begin
-        HSCounter <= HSCounter;
-        oldHS <= HS;
+//        HSCounter <= HSCounter;
+//        oldHS <= HS;
         
-        if(ele120_time < 16'd250)begin
+//        if(ele120_time < 16'd1500)begin
+          if(delayAngleCounter < 16'd1500)begin
           drive_mode <= HS; //change motor drive mode
         end else begin
-          ele120_time <= ele120_time - 16'd1;
+           delayAngleCounter <= delayAngleCounter - 16'd6;
+//          ele120_time <= ele120_time - 16'd1;
         end
       end
     end
