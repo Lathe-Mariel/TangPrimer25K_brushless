@@ -89,7 +89,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Mon Oct 13 19:23:58 2025
+<td>Mon Oct 13 19:37:40 2025
 </td>
 </tr>
 <tr>
@@ -161,22 +161,22 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Total Power (mW)</td>
-<td>58.557</td>
+<td>157.546</td>
 </tr>
 <tr>
 <td class="label">Quiescent Power (mW)</td>
-<td>53.493</td>
+<td>53.486</td>
 </tr>
 <tr>
 <td class="label">Dynamic Power (mW)</td>
-<td>5.064</td>
+<td>104.060</td>
 </tr>
 </table>
 <h2><a name="Thermal_Info">Thermal Information:</a></h2>
 <table class="summary_table">
 <tr>
 <td class="label">Junction Temperature</td>
-<td>26.979</td>
+<td>30.325</td>
 </tr>
 <tr>
 <td class="label">Theta JA</td>
@@ -184,7 +184,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Max Allowed Ambient Temperature</td>
-<td>83.021</td>
+<td>79.675</td>
 </tr>
 </table>
 <h2><a name="Supply_Summary">Supply Information:</a></h2>
@@ -199,23 +199,23 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>VCC</td>
 <td>0.900</td>
-<td>1.456</td>
+<td>111.036</td>
 <td>30.009</td>
-<td>28.319</td>
+<td>126.940</td>
 </tr>
 <tr>
 <td>VCCX</td>
 <td>3.300</td>
-<td>0.569</td>
+<td>0.625</td>
 <td>3.000</td>
-<td>11.777</td>
+<td>11.964</td>
 </tr>
 <tr>
 <td>VCCIO33</td>
 <td>3.300</td>
-<td>0.569</td>
-<td>1.026</td>
-<td>5.262</td>
+<td>0.625</td>
+<td>1.024</td>
+<td>5.442</td>
 </tr>
 <tr>
 <td>VCC_LDO</td>
@@ -236,21 +236,27 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>Logic</td>
-<td>0.458</td>
+<td>0.546</td>
 <td>NA</td>
-<td>9.255</td>
+<td>7.372</td>
 </tr>
 <tr>
 <td>IO</td>
-<td>11.323
-<td>7.062
-<td>10.417
+<td>12.093
+<td>7.408
+<td>10.536
+</tr>
+<tr>
+<td>BSRAM</td>
+<td>98.483
+<td>NA</td>
+<td>NA</td>
 </tr>
 <tr>
 <td>DSP</td>
 <td>0.345
 <td>NA</td>
-<td>8.347
+<td>9.688
 </tr>
 </table>
 <h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
@@ -262,20 +268,36 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>top</td>
-<td>0.803</td>
-<td>0.803(0.120)</td>
+<td>99.375</td>
+<td>99.375(98.652)</td>
 <tr>
 <td>top/can_controller_i/</td>
-<td>0.089</td>
-<td>0.089(0.089)</td>
+<td>0.093</td>
+<td>0.093(0.093)</td>
 <tr>
 <td>top/can_controller_i/can_sender_i/</td>
-<td>0.040</td>
-<td>0.040(0.000)</td>
+<td>0.046</td>
+<td>0.046(0.000)</td>
 <tr>
 <td>top/can_controller_i/can_synchronizer_i/</td>
-<td>0.049</td>
-<td>0.049(0.000)</td>
+<td>0.047</td>
+<td>0.047(0.000)</td>
+<tr>
+<td>top/gw_gao_inst_0/</td>
+<td>98.528</td>
+<td>98.528(98.528)</td>
+<tr>
+<td>top/gw_gao_inst_0/u_ao_top/</td>
+<td>98.528</td>
+<td>98.528(98.496)</td>
+<tr>
+<td>top/gw_gao_inst_0/u_ao_top/u_ao_mem_ctrl/</td>
+<td>98.496</td>
+<td>98.496(0.000)</td>
+<tr>
+<td>top/gw_gao_inst_0/u_icon_top/</td>
+<td>0.001</td>
+<td>0.001(0.000)</td>
 <tr>
 <td>top/vehicle_data_generator_i/</td>
 <td>0.030</td>
@@ -291,22 +313,27 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>clk</td>
 <td>50.000</td>
-<td>0.163</td>
+<td>0.167</td>
 </tr>
 <tr>
 <td>AD_CLK_d</td>
 <td>100.000</td>
-<td>0.632</td>
+<td>82.758</td>
 </tr>
 <tr>
-<td>n2308_15</td>
-<td>100.000</td>
-<td>0.003</td>
+<td>tck_pad_i</td>
+<td>20.000</td>
+<td>16.443</td>
 </tr>
 <tr>
-<td>n2311_13</td>
+<td>n2438_13</td>
 <td>100.000</td>
 <td>0.004</td>
+</tr>
+<tr>
+<td>n2435_15</td>
+<td>100.000</td>
+<td>0.003</td>
 </tr>
 </table>
 </div><!-- content -->

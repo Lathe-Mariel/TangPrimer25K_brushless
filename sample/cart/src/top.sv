@@ -67,10 +67,11 @@ module top (
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
   logic[15:0]  OldprocessCounter;
   //logic[15:0]  ele120_time;
-  logic[15:0] counter_per_cycle;      // counter per electrical angle 360degree 
+  logic[15:0] counter_per_cycle;      // counter per electrical angle 360degree
+  logic[15:0] oldCounter_per_cycle;
   logic       isRotate;               // for control forcedRotation
   logic[2:0]  oldHS;                  // old Hall Sensor value
-  logic[9:0]  delayAngleCounter;
+  logic[15:0]  delayAngleCounter;
 
   logic[2:0]  drive_mode;                   // BLDC drive mode
 
@@ -199,6 +200,7 @@ module top (
     end else begin  // when(processCounter % 2048 != 0)
       if(oldHS != HS)begin
         if(HS == 3'b001) begin
+          oldCounter_per_cycle <= counter_per_cycle;
           counter_per_cycle <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
           OldprocessCounter <= processCounter;
         end
@@ -214,7 +216,7 @@ module top (
 //        oldHS <= HS;
         
 //        if(ele120_time < 16'd1500)begin
-          if(delayAngleCounter < 16'd1500)begin
+        if(delayAngleCounter < 16'd1500)begin
           drive_mode <= HS; //change motor drive mode
         end else begin
            delayAngleCounter <= delayAngleCounter - 16'd6;
@@ -279,14 +281,12 @@ module top (
         accel <= 'd0;
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
-      end else begin
-//        if(HSCounter < 5)begin  //soft start
-//          accel <= (((analog_scan[5] - 'd280) * 2) < 100) ?(analog_scan[5] - 'd280) * 2 : 'd400;
-//        end else if(HSCounter < 10)begin //soft start2
-//          accel <= (((analog_scan[5] - 'd280) * 2) < 300) ?(analog_scan[5] - 'd280) * 2 : 'd500;
-//        end else begin
+      end else begin  //for soft start
+        if(counter_per_cycle < (oldCounter_per_cycle >> 1))begin
+          accel <= 'd10;
+        end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
-//        end
+        end
       end
 
       DIN <= 0;

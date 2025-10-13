@@ -4,6 +4,7 @@
 -cst E:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
 -cfg E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\device.cfg
 -sdc E:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
+-gao_crc 0000001010100110
 -bit
 -tr
 -ph
@@ -17,3 +18,4 @@
 -route_maxfan 23
 -global_freq 100.000
 -enable_dsrm 0
+-rtl_gao

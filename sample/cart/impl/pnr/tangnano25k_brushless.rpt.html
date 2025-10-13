@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Mon Oct 13 19:23:58 2025
+<td>Mon Oct 13 19:37:40 2025
 </td>
 </tr>
 <tr>
@@ -97,24 +97,24 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.083s, Elapsed time = 0h 0m 0.084s
-   Placement Phase 1: CPU time = 0h 0m 0.178s, Elapsed time = 0h 0m 0.178s
-   Placement Phase 2: CPU time = 0h 0m 0.07s, Elapsed time = 0h 0m 0.07s
-   Placement Phase 3: CPU time = 0h 0m 0.413s, Elapsed time = 0h 0m 0.412s
-   Total Placement: CPU time = 0h 0m 0.744s, Elapsed time = 0h 0m 0.744s
+   Placement Phase 0: CPU time = 0h 0m 0.134s, Elapsed time = 0h 0m 0.134s
+   Placement Phase 1: CPU time = 0h 0m 0.166s, Elapsed time = 0h 0m 0.166s
+   Placement Phase 2: CPU time = 0h 0m 0.155s, Elapsed time = 0h 0m 0.155s
+   Placement Phase 3: CPU time = 0h 0m 0.543s, Elapsed time = 0h 0m 0.542s
+   Total Placement: CPU time = 0h 0m 0.998s, Elapsed time = 0h 0m 0.997s
 Running routing:
-   Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-   Routing Phase 1: CPU time = 0h 0m 0.767s, Elapsed time = 0h 0m 0.766s
-   Routing Phase 2: CPU time = 0h 0m 0.027s, Elapsed time = 0h 0m 0.028s
+   Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s
+   Routing Phase 1: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+   Routing Phase 2: CPU time = 0h 0m 0.035s, Elapsed time = 0h 0m 0.035s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Total Routing: CPU time = 0h 0m 0.795s, Elapsed time = 0h 0m 0.795s
+   Total Routing: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 Generate output files:
    CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 </td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s, Peak memory usage = 472MB</td>
+<td>CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s, Peak memory usage = 491MB</td>
 </tr>
 </table>
 <br/>
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>614/23040</td>
-<td>3%</td>
+<td>969/23040</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>614(452 LUT, 162 ALU, 0 ROM16)</td>
+<td>969(789 LUT, 180 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -144,8 +144,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>315/23280</td>
-<td>2%</td>
+<td>668/23280</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as Latch</td>
@@ -154,8 +154,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>306/23040</td>
-<td>2%</td>
+<td>659/23040</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -169,33 +169,38 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>403/11520</td>
-<td>4%</td>
+<td>725/11520</td>
+<td>7%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
-<td>28/86</td>
-<td>33%</td>
+<td>32/86</td>
+<td>38%</td>
 </tr>
 <tr>
 <td class="label">I/O Buf</td>
-<td>24</td>
+<td>28</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Input Buf</td>
-<td>8</td>
+<td>11</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Output Buf</td>
-<td>16</td>
+<td>17</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Inout Buf</td>
 <td>0</td>
 <td>-</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>34 SDPB<br/></td>
+<td>61%</td>
 </tr>
 <tr>
 <td class="label">DSP</td>
@@ -242,7 +247,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">bank 10</td>
-<td>0/4</td><td>0%</td>
+<td>4/4</td><td>100%</td>
 </tr>
 </table>
 <br/>
@@ -255,13 +260,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">PRIMARY</td>
-<td>4/8</td>
-<td>50%</td>
+<td>5/8</td>
+<td>63%</td>
 </tr>
 <tr>
 <td class="label">LW</td>
-<td>0/8</td>
-<td>0%</td>
+<td>1/8</td>
+<td>13%</td>
 </tr>
 <tr>
 <td class="label">GCLK_PIN</td>
@@ -283,19 +288,29 @@ Generate output files:
 <td> TR TL BR BL</td>
 </tr>
 <tr>
-<td class="label">n2311_13</td>
+<td class="label">n2438_13</td>
 <td>PRIMARY</td>
-<td> BL</td>
+<td> TR</td>
 </tr>
 <tr>
-<td class="label">n2308_15</td>
+<td class="label">n2435_15</td>
 <td>PRIMARY</td>
 <td> TL</td>
 </tr>
 <tr>
 <td class="label">AD_CLK_d</td>
 <td>PRIMARY</td>
-<td> TL BL</td>
+<td> TR TL BR BL</td>
+</tr>
+<tr>
+<td class="label">gw_gao_inst_0/control0[0]</td>
+<td>PRIMARY</td>
+<td> TR TL BR BL</td>
+</tr>
+<tr>
+<td class="label">gw_gao_inst_0/gao_jtag_reset</td>
+<td>LW</td>
+<td> -</td>
 </tr>
 </table>
 <br/>
@@ -561,6 +576,69 @@ Generate output files:
 <td>in</td>
 <td>IOL12[A]</td>
 <td>-</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td class="label">tms_pad_i</td>
+<td>-</td>
+<td>B1/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR3[A]</td>
+<td>TMS</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td class="label">tck_pad_i</td>
+<td>-</td>
+<td>C1/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR1[A]</td>
+<td>TCK</td>
+<td>LVCMOS33</td>
+<td>OFF</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>ON</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td class="label">tdi_pad_i</td>
+<td>-</td>
+<td>A3/10</td>
+<td>N</td>
+<td>in</td>
+<td>IOR1[B]</td>
+<td>TDI</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
 <td>NONE</td>
@@ -897,6 +975,27 @@ Generate output files:
 <td>out</td>
 <td>IOT7[A]</td>
 <td>-</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>OFF</td>
+<td>3.3</td>
+<td>MEDIUM</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td class="label">tdo_pad_o</td>
+<td>-</td>
+<td>A2/10</td>
+<td>N</td>
+<td>out</td>
+<td>IOR3[B]</td>
+<td>TDO</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -2265,13 +2364,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">C1/10</td>
-<td>-</td>
+<td>tck_pad_i</td>
 <td>in</td>
 <td>IOR1[A]</td>
 <td>TCK</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -2284,13 +2383,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">A3/10</td>
-<td>-</td>
+<td>tdi_pad_i</td>
 <td>in</td>
 <td>IOR1[B]</td>
 <td>TDI</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -2303,13 +2402,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">B1/10</td>
-<td>-</td>
+<td>tms_pad_i</td>
 <td>in</td>
 <td>IOR3[A]</td>
 <td>TMS</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
+<td>OFF</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>ON</td>
 <td>OFF</td>
@@ -2322,13 +2421,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">A2/10</td>
-<td>-</td>
+<td>tdo_pad_o</td>
 <td>out</td>
 <td>IOR3[B]</td>
 <td>TDO</td>
 <td>LVCMOS33</td>
 <td>8</td>
-<td>UP</td>
+<td>NONE</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
