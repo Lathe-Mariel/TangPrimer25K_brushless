@@ -123,6 +123,8 @@ module top (
 
   always @(posedge controlCLK)begin
 
+    if(counter_per_cycle 
+
 // forced rotation
     if(isRotate == 0)begin
       if(forcedRotationCounter == 0)begin
