@@ -66,6 +66,7 @@ module top (
   logic[15:0] processCounter;         // general counter 
   logic[9:0]  HSCounter;              // measurement hall sensor pulse
   logic[15:0]  OldprocessCounter;
+
   //logic[15:0]  ele120_time;
   logic[15:0] counter_per_cycle;      // counter per electrical angle 360degree
   logic[15:0] oldCounter_per_cycle;
@@ -79,6 +80,7 @@ module top (
 
   logic[9:0]  recieveADC;             // adc data from MCP3008
   logic[9:0]  accel;                  // accel value, that is transformed from recieveADC
+  logic[9:0] speedMargin;
 
   logic[9:0]  analog_scan[8];         // storing adc(MCP3008, 10bits) values
 
@@ -122,8 +124,6 @@ module top (
 
 
   always @(posedge controlCLK)begin
-
-    if(counter_per_cycle 
 
 // forced rotation
     if(isRotate == 0)begin
@@ -181,21 +181,13 @@ module top (
       engine_rev <= HSCounter * 10'd3;
       HSCounter <= 0;
 
-/*
       if(HSCounter > 0)begin
         isRotate <= 'b1;
       end else begin
         isRotate <= 'b0;
         forcedRotationCounter <= 0;
       end
-*/
 
-      if(counter_per_cycle > 0)begin
-        isRotate <= 'b1;
-      end else begin
-        isRotate <= 'b0;
-        forcedRotationCounter <= 0;
-      end
 
 // counter changing HS value
 // advancing electric angle 
@@ -205,19 +197,14 @@ module top (
           oldCounter_per_cycle <= counter_per_cycle;
           counter_per_cycle <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
           OldprocessCounter <= processCounter;
+          speedMargin <= oldCounter_per_cycle > counter_per_cycle?10'd1000 - (oldCounter_per_cycle - counter_per_cycle):10'd1000;
         end
         delayAngleCounter <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
-//        drive_mode <= HS;
-//        ele120_time <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 16'hffff - OldprocessCounter + processCounter;
-//        ele120_time <= (processCounter - OldprocessCounter);
-//        OldprocessCounter <= processCounter;
+
       end else begin
-//        HSCounter <= HSCounter;
-//        oldHS <= HS;
-        
-//        if(ele120_time < 16'd1500)begin
+
         if(delayAngleCounter < 16'd1500)begin
           drive_mode <= HS; //change motor drive mode
         end else begin
@@ -284,8 +271,8 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin  //for soft start
-        if(counter_per_cycle < (oldCounter_per_cycle >> 1))begin
-          accel <= 'd10;
+        if(speedMargin < analog_scan[5])begin
+          accel <= speedMargin;
         end else begin
           accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
         end

@@ -1,7 +1,7 @@
-Reading netlist file: "E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"
-Parsing netlist file "E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg" completed
+Reading netlist file: "C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"
+Parsing netlist file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg" completed
 Processing netlist completed
-Reading constraint file: "E:\git\TangPrimer25K_brushless\sample\cart\src\top.cst"
+Reading constraint file: "C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -9,8 +9,8 @@ Running placement......
 [30%] Placement Phase 2 completed
 WARN  (TA1132) :  'tck_pad_i' was determined to be a clock but was not created.
 WARN  (TA1132) :  'AD_CLK_d' was determined to be a clock but was not created.
-WARN  (TA1132) :  'n2435_15' was determined to be a clock but was not created.
-WARN  (TA1132) :  'n2438_13' was determined to be a clock but was not created.
+WARN  (TA1132) :  'n2561_18' was determined to be a clock but was not created.
+WARN  (TA1132) :  'n2564_13' was determined to be a clock but was not created.
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -24,10 +24,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.power.html" completed
-Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.pin.html" completed
-Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.html" completed
-Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.txt" completed
-Generate file "E:\git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.tr.html" completed
-Mon Oct 13 19:37:40 2025
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.power.html" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.pin.html" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.html" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.rpt.txt" completed
+Generate file "C:\Git\TangPrimer25K_brushless\sample\cart\impl\pnr\tangnano25k_brushless.tr.html" completed
+Mon Oct 20 21:42:13 2025
 
