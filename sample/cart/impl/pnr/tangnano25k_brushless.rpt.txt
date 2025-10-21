@@ -5,34 +5,34 @@
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
-  <Physical Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\top.cst
-  <Timing Constraints File>: C:\Git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
-  <Tool Version>: V1.9.12 (64-bit)
+  <Design File>: E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg
+  <Physical Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\top.cst
+  <Timing Constraints File>: E:\git\TangPrimer25K_brushless\sample\cart\src\timing.sdc
+  <Tool Version>: V1.9.11.01 (64-bit)
   <Part Number>: GW5A-LV25MG121NES
   <Device>: GW5A-25
   <Device Version>: A
-  <Created Time>:Tue Oct 21 19:45:15 2025
+  <Created Time>:Tue Oct 21 20:46:31 2025
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.118s, Elapsed time = 0h 0m 0.118s
-    Placement Phase 1: CPU time = 0h 0m 0.137s, Elapsed time = 0h 0m 0.136s
-    Placement Phase 2: CPU time = 0h 0m 0.106s, Elapsed time = 0h 0m 0.106s
-    Placement Phase 3: CPU time = 0h 0m 0.387s, Elapsed time = 0h 0m 0.387s
-    Total Placement: CPU time = 0h 0m 0.748s, Elapsed time = 0h 0m 0.747s
+    Placement Phase 0: CPU time = 0h 0m 0.173s, Elapsed time = 0h 0m 0.173s
+    Placement Phase 1: CPU time = 0h 0m 0.187s, Elapsed time = 0h 0m 0.187s
+    Placement Phase 2: CPU time = 0h 0m 0.165s, Elapsed time = 0h 0m 0.164s
+    Placement Phase 3: CPU time = 0h 0m 0.5s, Elapsed time = 0h 0m 0.5s
+    Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Routing Phase 1: CPU time = 0h 0m 0.934s, Elapsed time = 0h 0m 0.934s
-    Routing Phase 2: CPU time = 0h 0m 0.029s, Elapsed time = 0h 0m 0.029s
+    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
+    Routing Phase 1: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+    Routing Phase 2: CPU time = 0h 0m 0.045s, Elapsed time = 0h 0m 0.044s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 0.963s, Elapsed time = 0h 0m 0.963s
+    Total Routing: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
  Generate output files:
     CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 
- Total Time and Memory Usage: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s, Peak memory usage = 656MB
+ Total Time and Memory Usage: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s, Peak memory usage = 515MB
 
 
 3. Resource Usage Summary
@@ -40,22 +40,22 @@
   --------------------------------------------------------------------------------
   Resources                   | Usage                               | Utilization
   --------------------------------------------------------------------------------
-  Logic                       | 1088/23040                          |  5%
-    --LUT,ALU,ROM16           | 1088(863 LUT, 225 ALU, 0 ROM16)     | -
+  Logic                       | 1065/23040                          |  5%
+    --LUT,ALU,ROM16           | 1065(868 LUT, 197 ALU, 0 ROM16)     | -
     --SSRAM(RAM16)            | 0                                   | -
-  Register                    | 680/23280                           |  3%
+  Register                    | 621/23280                           |  3%
     --Logic Register as Latch | 3/23040                             |  <1%
-    --Logic Register as FF    | 671/23040                           |  3%
+    --Logic Register as FF    | 612/23040                           |  3%
     --I/O Register as Latch   | 3/240                               |  2%
     --I/O Register as FF      | 3/240                               |  2%
-  CLS                         | 795/11520                           |  7%
+  CLS                         | 755/11520                           |  7%
   I/O Port                    | 32/86                               |  38%
   I/O Buf                     | 28                                  | -
     --Input Buf               | 11                                  | -
     --Output Buf              | 17                                  | -
     --Inout Buf               | 0                                   | -
-  BSRAM                       | 34/56                               | 61%
-    --SDPB                    | 34
+  BSRAM                       | 55/56                               | 99%
+    --SDPB                    | 55
   DSP                         | 0.5/28                              | 2%
     --MULT12X12               | 1
   ================================================================================
@@ -69,9 +69,9 @@
   --------------------------------------
   bank 0   | 3/6         | 50%         
   bank 1   | 5/10        | 50%         
-  bank 2   | 2/12        | 17%         
+  bank 2   | 1/12        | 9%          
   bank 3   | 0/4         | 0%          
-  bank 4   | 0/11        | 0%          
+  bank 4   | 1/11        | 10%         
   bank 5   | 5/13        | 39%         
   bank 6   | 6/10        | 60%         
   bank 7   | 7/16        | 44%         
@@ -86,7 +86,7 @@
   ------------------------------------------
   PRIMARY       | 5/8           | 63%
   LW            | 1/8           | 13%
-  GCLK_PIN      | 13/30         | 44%
+  GCLK_PIN      | 12/30         | 40%
   ==========================================
 
 
@@ -95,9 +95,9 @@
   -------------------------------------------
   Signal         | Global Clock   | Location
   -------------------------------------------
-  clk_d          | PRIMARY        |  TR TL BR BL
-  n2646_13       | PRIMARY        |  TL
-  n2643_18       | PRIMARY        |  TL
+  clk_d          | PRIMARY        |  TL BR BL
+  n2662_13       | PRIMARY        |  TL
+  n2659_15       | PRIMARY        |  TL
   AD_CLK_d       | PRIMARY        |  TR TL BR BL
   gw_gao_inst_0/control0[0]| PRIMARY        |  TR TL BR BL
   gw_gao_inst_0/gao_jtag_reset| LW             |  -
@@ -133,8 +133,8 @@ HIN_T        | -         | K7/7          | Y          | out   | IOT21[A] | -    
 _LIN_R       | -         | H8/1          | Y          | out   | IOT66[A] | -               | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
 _LIN_S       | -         | F5/1          | Y          | out   | IOT72[A] | -               | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
 _LIN_T       | -         | G7/1          | Y          | out   | IOT68[A] | -               | LVCMOS33   | 8     | UP        | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
-CAN_LED0     | -         | C10/6         | N          | out   | IOL5[B]  | GCLKC_13/LPLL0_C_FB1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
-CAN_LED1     | -         | L4/2          | N          | out   | IOR31[A] | GCLKT_4/RPLL1_T_IN0 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+CAN_LED0     | -         | E4/4          | N          | out   | IOB54[B] | GCLKC_11B/D02/MI3/BPLL_C_FB1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+CAN_LED1     | -         | D10/6         | N          | out   | IOL9[B]  | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
 s            | -         | D11/6         | Y          | out   | IOL9[A]  | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
 txd          | -         | C11/6         | Y          | out   | IOL5[A]  | GCLKT_13/LPLL0_T_IN1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
 led_g        | -         | J10/7         | Y          | out   | IOT1[B]  | GCLKC_15        | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
@@ -200,7 +200,7 @@ F1/5     | AD_CLK       | out   | IOB26[B] | GCLKC_9B        | LVCMOS33 | 8     
 E8/4     | -            | in    | IOB37[A] | READY           | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 E6/4     | -            | in    | IOB37[B] | MCS_N/CSO_B     | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 D5/4     | -            | in    | IOB54[A] | GCLKT_11B/D01/MI2 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
-E4/4     | -            | in    | IOB54[B] | GCLKC_11B/D02/MI3/BPLL_C_FB1 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+E4/4     | CAN_LED0     | out   | IOB54[B] | GCLKC_11B/D02/MI3/BPLL_C_FB1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 B3/4     | -            | in    | IOB56[A] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 C3/4     | -            | in    | IOB56[B] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 E5/4     | -            | in    | IOB58[A] | D00/DIN/MISO/MI1 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
@@ -216,9 +216,9 @@ H2/3     | -            | in    | IOB91[B] | GCLKC_6A        | LVCMOS33 | 8     
 E11/6    | HS[2]        | in    | IOL3[A]  | GCLKT_14/LPLL0_T_IN2 | LVCMOS33 | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 E10/6    | -            | in    | IOL3[B]  | GCLKC_14/LPLL0_C_FB0 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 C11/6    | txd          | out   | IOL5[A]  | GCLKT_13/LPLL0_T_IN1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
-C10/6    | CAN_LED0     | out   | IOL5[B]  | GCLKC_13/LPLL0_C_FB1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+C10/6    | -            | in    | IOL5[B]  | GCLKC_13/LPLL0_C_FB1 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 D11/6    | s            | out   | IOL9[A]  | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
-D10/6    | -            | in    | IOL9[B]  | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+D10/6    | CAN_LED1     | out   | IOL9[B]  | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 B11/6    | rxd          | in    | IOL12[A] | -               | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 B10/6    | -            | in    | IOL12[B] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 A11/6    | HS[0]        | in    | IOL14[A] | LPLL1_T_IN0     | LVCMOS33 | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
@@ -236,7 +236,7 @@ J4/2     | -            | in    | IOR22[A] | -               | LVCMOS33 | 8     
 K4/2     | -            | in    | IOR22[B] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 G2/2     | -            | in    | IOR24[A] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 G1/2     | -            | in    | IOR24[B] | -               | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
-L4/2     | CAN_LED1     | out   | IOR31[A] | GCLKT_4/RPLL1_T_IN0 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+L4/2     | -            | in    | IOR31[A] | GCLKT_4/RPLL1_T_IN0 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 L3/2     | -            | in    | IOR31[B] | GCLKC_4/RPLL1_C_FB1 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 J1/2     | -            | in    | IOR33[A] | GCLKT_5/RPLL1_T_IN1 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
 J2/2     | -            | in    | IOR33[B] | GCLKC_5/RPLL1_C_FB0 | LVCMOS33 | 8     | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         

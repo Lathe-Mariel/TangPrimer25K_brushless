@@ -1,7 +1,4 @@
 module gw_gao(
-    \rotateState[2] ,
-    \rotateState[1] ,
-    \rotateState[0] ,
     \HSCounter[9] ,
     \HSCounter[8] ,
     \HSCounter[7] ,
@@ -15,25 +12,6 @@ module gw_gao(
     \HS[2] ,
     \HS[1] ,
     \HS[0] ,
-    \drive_mode[2] ,
-    \drive_mode[1] ,
-    \drive_mode[0] ,
-    \oldCounter_per_cycle[15] ,
-    \oldCounter_per_cycle[14] ,
-    \oldCounter_per_cycle[13] ,
-    \oldCounter_per_cycle[12] ,
-    \oldCounter_per_cycle[11] ,
-    \oldCounter_per_cycle[10] ,
-    \oldCounter_per_cycle[9] ,
-    \oldCounter_per_cycle[8] ,
-    \oldCounter_per_cycle[7] ,
-    \oldCounter_per_cycle[6] ,
-    \oldCounter_per_cycle[5] ,
-    \oldCounter_per_cycle[4] ,
-    \oldCounter_per_cycle[3] ,
-    \oldCounter_per_cycle[2] ,
-    \oldCounter_per_cycle[1] ,
-    \oldCounter_per_cycle[0] ,
     \counter_per_cycle[15] ,
     \counter_per_cycle[14] ,
     \counter_per_cycle[13] ,
@@ -66,6 +44,16 @@ module gw_gao(
     \delayAngleCounter[2] ,
     \delayAngleCounter[1] ,
     \delayAngleCounter[0] ,
+    \accel[9] ,
+    \accel[8] ,
+    \accel[7] ,
+    \accel[6] ,
+    \accel[5] ,
+    \accel[4] ,
+    \accel[3] ,
+    \accel[2] ,
+    \accel[1] ,
+    \accel[0] ,
     controlCLK,
     tms_pad_i,
     tck_pad_i,
@@ -73,9 +61,6 @@ module gw_gao(
     tdo_pad_o
 );
 
-input \rotateState[2] ;
-input \rotateState[1] ;
-input \rotateState[0] ;
 input \HSCounter[9] ;
 input \HSCounter[8] ;
 input \HSCounter[7] ;
@@ -89,25 +74,6 @@ input \HSCounter[0] ;
 input \HS[2] ;
 input \HS[1] ;
 input \HS[0] ;
-input \drive_mode[2] ;
-input \drive_mode[1] ;
-input \drive_mode[0] ;
-input \oldCounter_per_cycle[15] ;
-input \oldCounter_per_cycle[14] ;
-input \oldCounter_per_cycle[13] ;
-input \oldCounter_per_cycle[12] ;
-input \oldCounter_per_cycle[11] ;
-input \oldCounter_per_cycle[10] ;
-input \oldCounter_per_cycle[9] ;
-input \oldCounter_per_cycle[8] ;
-input \oldCounter_per_cycle[7] ;
-input \oldCounter_per_cycle[6] ;
-input \oldCounter_per_cycle[5] ;
-input \oldCounter_per_cycle[4] ;
-input \oldCounter_per_cycle[3] ;
-input \oldCounter_per_cycle[2] ;
-input \oldCounter_per_cycle[1] ;
-input \oldCounter_per_cycle[0] ;
 input \counter_per_cycle[15] ;
 input \counter_per_cycle[14] ;
 input \counter_per_cycle[13] ;
@@ -140,15 +106,22 @@ input \delayAngleCounter[3] ;
 input \delayAngleCounter[2] ;
 input \delayAngleCounter[1] ;
 input \delayAngleCounter[0] ;
+input \accel[9] ;
+input \accel[8] ;
+input \accel[7] ;
+input \accel[6] ;
+input \accel[5] ;
+input \accel[4] ;
+input \accel[3] ;
+input \accel[2] ;
+input \accel[1] ;
+input \accel[0] ;
 input controlCLK;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire \rotateState[2] ;
-wire \rotateState[1] ;
-wire \rotateState[0] ;
 wire \HSCounter[9] ;
 wire \HSCounter[8] ;
 wire \HSCounter[7] ;
@@ -162,25 +135,6 @@ wire \HSCounter[0] ;
 wire \HS[2] ;
 wire \HS[1] ;
 wire \HS[0] ;
-wire \drive_mode[2] ;
-wire \drive_mode[1] ;
-wire \drive_mode[0] ;
-wire \oldCounter_per_cycle[15] ;
-wire \oldCounter_per_cycle[14] ;
-wire \oldCounter_per_cycle[13] ;
-wire \oldCounter_per_cycle[12] ;
-wire \oldCounter_per_cycle[11] ;
-wire \oldCounter_per_cycle[10] ;
-wire \oldCounter_per_cycle[9] ;
-wire \oldCounter_per_cycle[8] ;
-wire \oldCounter_per_cycle[7] ;
-wire \oldCounter_per_cycle[6] ;
-wire \oldCounter_per_cycle[5] ;
-wire \oldCounter_per_cycle[4] ;
-wire \oldCounter_per_cycle[3] ;
-wire \oldCounter_per_cycle[2] ;
-wire \oldCounter_per_cycle[1] ;
-wire \oldCounter_per_cycle[0] ;
 wire \counter_per_cycle[15] ;
 wire \counter_per_cycle[14] ;
 wire \counter_per_cycle[13] ;
@@ -213,6 +167,16 @@ wire \delayAngleCounter[3] ;
 wire \delayAngleCounter[2] ;
 wire \delayAngleCounter[1] ;
 wire \delayAngleCounter[0] ;
+wire \accel[9] ;
+wire \accel[8] ;
+wire \accel[7] ;
+wire \accel[6] ;
+wire \accel[5] ;
+wire \accel[4] ;
+wire \accel[3] ;
+wire \accel[2] ;
+wire \accel[1] ;
+wire \accel[0] ;
 wire controlCLK;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -287,7 +251,7 @@ gw_con_top  u_icon_top(
 
 ao_top u_ao_top(
     .control(control0[9:0]),
-    .data_i({\rotateState[2] ,\rotateState[1] ,\rotateState[0] ,\HSCounter[9] ,\HSCounter[8] ,\HSCounter[7] ,\HSCounter[6] ,\HSCounter[5] ,\HSCounter[4] ,\HSCounter[3] ,\HSCounter[2] ,\HSCounter[1] ,\HSCounter[0] ,\HS[2] ,\HS[1] ,\HS[0] ,\drive_mode[2] ,\drive_mode[1] ,\drive_mode[0] ,\oldCounter_per_cycle[15] ,\oldCounter_per_cycle[14] ,\oldCounter_per_cycle[13] ,\oldCounter_per_cycle[12] ,\oldCounter_per_cycle[11] ,\oldCounter_per_cycle[10] ,\oldCounter_per_cycle[9] ,\oldCounter_per_cycle[8] ,\oldCounter_per_cycle[7] ,\oldCounter_per_cycle[6] ,\oldCounter_per_cycle[5] ,\oldCounter_per_cycle[4] ,\oldCounter_per_cycle[3] ,\oldCounter_per_cycle[2] ,\oldCounter_per_cycle[1] ,\oldCounter_per_cycle[0] ,\counter_per_cycle[15] ,\counter_per_cycle[14] ,\counter_per_cycle[13] ,\counter_per_cycle[12] ,\counter_per_cycle[11] ,\counter_per_cycle[10] ,\counter_per_cycle[9] ,\counter_per_cycle[8] ,\counter_per_cycle[7] ,\counter_per_cycle[6] ,\counter_per_cycle[5] ,\counter_per_cycle[4] ,\counter_per_cycle[3] ,\counter_per_cycle[2] ,\counter_per_cycle[1] ,\counter_per_cycle[0] ,\delayAngleCounter[15] ,\delayAngleCounter[14] ,\delayAngleCounter[13] ,\delayAngleCounter[12] ,\delayAngleCounter[11] ,\delayAngleCounter[10] ,\delayAngleCounter[9] ,\delayAngleCounter[8] ,\delayAngleCounter[7] ,\delayAngleCounter[6] ,\delayAngleCounter[5] ,\delayAngleCounter[4] ,\delayAngleCounter[3] ,\delayAngleCounter[2] ,\delayAngleCounter[1] ,\delayAngleCounter[0] }),
+    .data_i({\HSCounter[9] ,\HSCounter[8] ,\HSCounter[7] ,\HSCounter[6] ,\HSCounter[5] ,\HSCounter[4] ,\HSCounter[3] ,\HSCounter[2] ,\HSCounter[1] ,\HSCounter[0] ,\HS[2] ,\HS[1] ,\HS[0] ,\counter_per_cycle[15] ,\counter_per_cycle[14] ,\counter_per_cycle[13] ,\counter_per_cycle[12] ,\counter_per_cycle[11] ,\counter_per_cycle[10] ,\counter_per_cycle[9] ,\counter_per_cycle[8] ,\counter_per_cycle[7] ,\counter_per_cycle[6] ,\counter_per_cycle[5] ,\counter_per_cycle[4] ,\counter_per_cycle[3] ,\counter_per_cycle[2] ,\counter_per_cycle[1] ,\counter_per_cycle[0] ,\delayAngleCounter[15] ,\delayAngleCounter[14] ,\delayAngleCounter[13] ,\delayAngleCounter[12] ,\delayAngleCounter[11] ,\delayAngleCounter[10] ,\delayAngleCounter[9] ,\delayAngleCounter[8] ,\delayAngleCounter[7] ,\delayAngleCounter[6] ,\delayAngleCounter[5] ,\delayAngleCounter[4] ,\delayAngleCounter[3] ,\delayAngleCounter[2] ,\delayAngleCounter[1] ,\delayAngleCounter[0] ,\accel[9] ,\accel[8] ,\accel[7] ,\accel[6] ,\accel[5] ,\accel[4] ,\accel[3] ,\accel[2] ,\accel[1] ,\accel[0] }),
     .clk_i(controlCLK)
 );
 

@@ -2,13 +2,8 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Lite</Mode>
-    <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="8192" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+    <AoCore_Lite index="0" sample_clock="controlCLK" trig_type="0" capture_amount="16384" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
         <SignalList>
-            <Bus capture_enable="true" name="rotateState[2:0]">
-                <Signal>rotateState[2]</Signal>
-                <Signal>rotateState[1]</Signal>
-                <Signal>rotateState[0]</Signal>
-            </Bus>
             <Bus capture_enable="true" name="HSCounter[9:0]">
                 <Signal>HSCounter[9]</Signal>
                 <Signal>HSCounter[8]</Signal>
@@ -25,29 +20,6 @@
                 <Signal>HS[2]</Signal>
                 <Signal>HS[1]</Signal>
                 <Signal>HS[0]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="drive_mode[2:0]">
-                <Signal>drive_mode[2]</Signal>
-                <Signal>drive_mode[1]</Signal>
-                <Signal>drive_mode[0]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="oldCounter_per_cycle[15:0]">
-                <Signal>oldCounter_per_cycle[15]</Signal>
-                <Signal>oldCounter_per_cycle[14]</Signal>
-                <Signal>oldCounter_per_cycle[13]</Signal>
-                <Signal>oldCounter_per_cycle[12]</Signal>
-                <Signal>oldCounter_per_cycle[11]</Signal>
-                <Signal>oldCounter_per_cycle[10]</Signal>
-                <Signal>oldCounter_per_cycle[9]</Signal>
-                <Signal>oldCounter_per_cycle[8]</Signal>
-                <Signal>oldCounter_per_cycle[7]</Signal>
-                <Signal>oldCounter_per_cycle[6]</Signal>
-                <Signal>oldCounter_per_cycle[5]</Signal>
-                <Signal>oldCounter_per_cycle[4]</Signal>
-                <Signal>oldCounter_per_cycle[3]</Signal>
-                <Signal>oldCounter_per_cycle[2]</Signal>
-                <Signal>oldCounter_per_cycle[1]</Signal>
-                <Signal>oldCounter_per_cycle[0]</Signal>
             </Bus>
             <Bus capture_enable="true" name="counter_per_cycle[15:0]">
                 <Signal>counter_per_cycle[15]</Signal>
@@ -85,7 +57,19 @@
                 <Signal>delayAngleCounter[1]</Signal>
                 <Signal>delayAngleCounter[0]</Signal>
             </Bus>
+            <Bus capture_enable="true" name="accel[9:0]">
+                <Signal>accel[9]</Signal>
+                <Signal>accel[8]</Signal>
+                <Signal>accel[7]</Signal>
+                <Signal>accel[6]</Signal>
+                <Signal>accel[5]</Signal>
+                <Signal>accel[4]</Signal>
+                <Signal>accel[3]</Signal>
+                <Signal>accel[2]</Signal>
+                <Signal>accel[1]</Signal>
+                <Signal>accel[0]</Signal>
+            </Bus>
         </SignalList>
     </AoCore_Lite>
-    <GAO_ID>0000001010100110</GAO_ID>
+    <GAO_ID>0110101101110010</GAO_ID>
 </GAO_CONFIG>

@@ -4,25 +4,25 @@
     <Version>beta</Version>
     <Device id="GW5A-25A" package="MBGA121N" speed="1" partNumber="GW5A-LV25MG121NES"/>
     <FileList>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_controller.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_sender.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\top.sv" type="verilog"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv" type="verilog"/>
-        <File path="C:\Gowin\Gowin_V1.9.12_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
-        <File path="C:\Gowin\Gowin_V1.9.12_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v" type="gao"/>
-        <File path="C:\Gowin\Gowin_V1.9.12_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v" type="gao"/>
-        <File path="C:\Gowin\Gowin_V1.9.12_x64\IDE\data\ipcores\gw_jtag.v" type="gao"/>
-        <File path="C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\RTL_GAO\gw_gao_top.v" type="gao"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_controller.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_sender.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\can_synchronizer.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\top.sv" type="verilog"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\src\vehicle_data_generator.sv" type="verilog"/>
+        <File path="E:\Gowin\Gowin_V1.9.11.01_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
+        <File path="E:\Gowin\Gowin_V1.9.11.01_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v" type="gao"/>
+        <File path="E:\Gowin\Gowin_V1.9.11.01_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v" type="gao"/>
+        <File path="E:\Gowin\Gowin_V1.9.11.01_x64\IDE\data\ipcores\gw_jtag.v" type="gao"/>
+        <File path="E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\RTL_GAO\gw_gao_top.v" type="gao"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="enable_dsrm" value="0"/>
         <Option type="global_freq" value="100.000"/>
-        <Option type="include_path" value="C:/Gowin/Gowin_V1.9.12_x64/IDE/data/ipcores/GAO_LITE"/>
-        <Option type="include_path" value="C:/Git/TangPrimer25K_brushless/sample/cart/impl/gwsynthesis/RTL_GAO"/>
+        <Option type="include_path" value="E:/Gowin/Gowin_V1.9.11.01_x64/IDE/data/ipcores/GAO_LITE"/>
+        <Option type="include_path" value="E:/git/TangPrimer25K_brushless/sample/cart/impl/gwsynthesis/RTL_GAO"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="C:\Git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"/>
+        <Option type="output_file" value="E:\git\TangPrimer25K_brushless\sample\cart\impl\gwsynthesis\tangnano25k_brushless.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="1"/>
         <Option type="top_module" value="top"/>

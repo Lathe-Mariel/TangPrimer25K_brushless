@@ -196,19 +196,20 @@ module top (
         if(HS == 3'b001) begin
           oldCounter_per_cycle <= counter_per_cycle;
           counter_per_cycle <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
-          OldprocessCounter <= processCounter;
-          speedMargin <= oldCounter_per_cycle > counter_per_cycle?10'd1000 - (oldCounter_per_cycle - counter_per_cycle):10'd1000;
+
+          speedMargin <= oldCounter_per_cycle > counter_per_cycle?10'd700 - (oldCounter_per_cycle - counter_per_cycle):10'd1000;
         end
         delayAngleCounter <= (processCounter > OldprocessCounter)? (processCounter - OldprocessCounter): 17'h10000 - OldprocessCounter + processCounter;
         HSCounter <= HSCounter + 1;
         oldHS <= HS;
+        OldprocessCounter <= processCounter;
 
       end else begin
 
-        if(delayAngleCounter < 16'd1500)begin
+        if(delayAngleCounter < 16'd250)begin
           drive_mode <= HS; //change motor drive mode
         end else begin
-           delayAngleCounter <= delayAngleCounter - 16'd6;
+           delayAngleCounter <= delayAngleCounter - 16'd1;
 //          ele120_time <= ele120_time - 16'd1;
         end
       end
@@ -271,11 +272,12 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin  //for soft start
-        if(speedMargin < (analog_scan[5] - 'd280) * 2)begin
-          accel <= (accel >> 1) + (accel >> 2); 
+//        if(speedMargin < (analog_scan[5] - 'd280) * 2)begin
+        if(((analog_scan[5] - 'd280) *2) < accel)begin
+          accel <= (analog_scan[5] - 'd280) *2; 
 //          accel <= speedMargin;
         end else begin
-          accel <= (accel >> 1) + (accel >> 2) + ((analog_scan[5] - 'd280) >> 1) ;  // for Mini Cart Accel     //origin 270 - 780
+          accel <= (accel >> 1) + (accel >> 2) + (accel >> 3) + ((analog_scan[5] - 'd280) >> 2) ;  // for Mini Cart Accel     //origin 270 - 780
         end
       end
 
