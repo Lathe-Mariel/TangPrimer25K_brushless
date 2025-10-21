@@ -271,10 +271,11 @@ module top (
       end else if(analog_scan[5] > 'd780) begin
         accel <= 'd1000;
       end else begin  //for soft start
-        if(speedMargin < analog_scan[5])begin
-          accel <= speedMargin;
+        if(speedMargin < (analog_scan[5] - 'd280) * 2)begin
+          accel <= (accel >> 1) + (accel >> 2); 
+//          accel <= speedMargin;
         end else begin
-          accel <= (analog_scan[5] - 'd280) * 2;  // for Mini Cart Accel     //origin 270 - 780
+          accel <= (accel >> 1) + (accel >> 2) + ((analog_scan[5] - 'd280) >> 1) ;  // for Mini Cart Accel     //origin 270 - 780
         end
       end
 

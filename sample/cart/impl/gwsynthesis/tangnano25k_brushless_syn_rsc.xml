@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="211" Alu="160" Lut="186" MULT12X12="1" T_Register="678(211)" T_Alu="198(160)" T_Lut="789(186)" T_MULT12X12="1(1)" T_Bsram="34(0)">
+<Module name="top" Register="213" Alu="173" Lut="200" MULT12X12="1" T_Register="680(213)" T_Alu="211(173)" T_Lut="869(200)" T_MULT12X12="1(1)" T_Bsram="34(0)">
  <SubModule name="vehicle_data_generator_i" Register="22" Alu="18" Lut="20" T_Register="22(22)" T_Alu="18(18)" T_Lut="20(20)"/>
- <SubModule name="can_controller_i" T_Register="124(0)" T_Alu="20(0)" T_Lut="296(0)">
-  <SubModule name="can_sender_i" Register="82" Lut="188" T_Register="82(82)" T_Lut="188(188)"/>
-  <SubModule name="can_synchronizer_i" Register="42" Alu="20" Lut="108" T_Register="42(42)" T_Alu="20(20)" T_Lut="108(108)"/>
+ <SubModule name="can_controller_i" T_Register="124(0)" T_Alu="20(0)" T_Lut="301(0)">
+  <SubModule name="can_sender_i" Register="82" Lut="195" T_Register="82(82)" T_Lut="195(195)"/>
+  <SubModule name="can_synchronizer_i" Register="42" Alu="20" Lut="106" T_Register="42(42)" T_Alu="20(20)" T_Lut="106(106)"/>
  </SubModule>
- <SubModule name="gw_gao_inst_0" Register="321" Lut="287" Bsram="34" T_Register="321(321)" T_Lut="287(287)" T_Bsram="34(34)"/>
+ <SubModule name="gw_gao_inst_0" Register="321" Lut="348" Bsram="34" T_Register="321(321)" T_Lut="348(348)" T_Bsram="34(34)"/>
 </Module>
